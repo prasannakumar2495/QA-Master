@@ -1,0 +1,19 @@
+-- VERSION_5
+-- START DISKCACHE_2
+D:\GIT\QA-Master\.metadata\.plugins\org.eclipse.core.resources\.projects\pythonPractice\com.python.pydev.analysis\v2_indexcache
+InitialPractice.p1|1544423456930948000|D:\GIT\QA-Master\pythonPractice\InitialPractice\p1.py
+InitialPractice.__init__|1544423456930948000|D:\GIT\QA-Master\pythonPractice\InitialPractice\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=D:\GIT\QA-Master\pythonPractice\InitialPractice\p1.py
+2=InitialPractice.p1
+-- END DICTIONARY
+-- START TREE 1
+2
+int|2|integer_value2!1^24#1*19@integer_value!1^17#1*19@
+str|1|string_value!1^18#1*19@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
