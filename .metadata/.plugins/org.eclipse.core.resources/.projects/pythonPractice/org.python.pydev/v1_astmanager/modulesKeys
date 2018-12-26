@@ -1,3 +1,10 @@
 MODULES_MANAGER_V2
-InitialPractice.__init__|D:\GIT\QA-Master\pythonPractice\InitialPractice\__init__.py
-InitialPractice.p1|D:\GIT\QA-Master\pythonPractice\InitialPractice\p1.py
+samplePractice.AdvCalculator|D:\GIT\QA-Master\pythonPractice\samplePractice\AdvCalculator.py
+samplePractice.Functions|D:\GIT\QA-Master\pythonPractice\samplePractice\Functions.py
+samplePractice.IFcondition|D:\GIT\QA-Master\pythonPractice\samplePractice\IFcondition.py
+samplePractice.Lists|D:\GIT\QA-Master\pythonPractice\samplePractice\Lists.py
+samplePractice.MadLibsGame|D:\GIT\QA-Master\pythonPractice\samplePractice\MadLibsGame.py
+samplePractice.SimpleCalculator|D:\GIT\QA-Master\pythonPractice\samplePractice\SimpleCalculator.py
+samplePractice.Tuples|D:\GIT\QA-Master\pythonPractice\samplePractice\Tuples.py
+samplePractice.firstPython|D:\GIT\QA-Master\pythonPractice\samplePractice\firstPython.py
+samplePractice.returnStatement|D:\GIT\QA-Master\pythonPractice\samplePractice\returnStatement.py
