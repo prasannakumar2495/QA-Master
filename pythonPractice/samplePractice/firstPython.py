@@ -56,7 +56,8 @@ print(floor(3.9))
 print(ceil(9.1))
 
 my_name = input("enter your name:")
-print("hello "+ my_name)
+my_age = input("my age is:")
+print("hello "+ my_name + my_age)
 
 
 
