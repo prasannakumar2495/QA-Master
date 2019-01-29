@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="4" total="30" passed="26">
+  <reporter-output>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+    <line>
+      <![CDATA[methods has been executed succesfully]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="106" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+    <groups>
+      <group name="pkp">
+        <method signature="MavenClass.run2()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@475530b9]" name="run2" class="com.maven.test.com.maven.practice.MavenClass"/>
+        <method signature="MavenClass.run2()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run2" class="com.maven.test.com.maven.practice.MavenClass"/>
+      </group> <!-- pkp -->
+      <group name="kp">
+        <method signature="MavenClass.run1()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run1" class="com.maven.test.com.maven.practice.MavenClass"/>
+      </group> <!-- kp -->
+      <group name="pk">
+        <method signature="MavenClass.run0()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@475530b9]" name="run0" class="com.maven.test.com.maven.practice.MavenClass"/>
+        <method signature="MavenClass.run2()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@475530b9]" name="run2" class="com.maven.test.com.maven.practice.MavenClass"/>
+        <method signature="MavenClass.run0()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run0" class="com.maven.test.com.maven.practice.MavenClass"/>
+        <method signature="MavenClass.run1()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run1" class="com.maven.test.com.maven.practice.MavenClass"/>
+        <method signature="MavenClass.run2()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run2" class="com.maven.test.com.maven.practice.MavenClass"/>
+      </group> <!-- pk -->
+    </groups>
+    <test name="Test" duration-ms="37" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+      <class name="com.maven.test.com.maven.practice.MavenClass">
+        <test-method status="PASS" signature="run0()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@475530b9]" name="run0" duration-ms="17" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run0 -->
+        <test-method status="PASS" signature="run2()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@475530b9]" name="run2" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run2 -->
+      </class> <!-- com.maven.test.com.maven.practice.MavenClass -->
+    </test> <!-- Test -->
+    <test name="test" duration-ms="38" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+      <class name="com.maven.test.com.maven.practice.MavenClass">
+        <test-method status="PASS" signature="nut()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="nut" duration-ms="2" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nut -->
+        <test-method status="PASS" signature="run0()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run0" duration-ms="2" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run0 -->
+        <test-method status="PASS" signature="run1()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run1" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run1 -->
+        <test-method status="PASS" signature="run2()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run2" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run2 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run3()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run3" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run3 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="0" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="2" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+        <test-method status="PASS" signature="run4()[pri:0, instance:com.maven.test.com.maven.practice.MavenClass@7d9d1a19]" name="run4" duration-ms="1" started-at="2019-01-29T06:44:35Z" finished-at="2019-01-29T06:44:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[methods has been executed succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run4 -->
+      </class> <!-- com.maven.test.com.maven.practice.MavenClass -->
+    </test> <!-- test -->
+  </suite> <!-- Suite -->
+</testng-results>
