@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test thread-count="5" name="brosertest(failed)" parallel="methods">
+    <parameter name="browsername" value="chrome"/>
+    <classes>
+      <class name="com.maven.test.com.maven.practice.MavenClass">
+        <methods>
+          <include name="browser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.maven.test.com.maven.practice.MavenClass -->
+    </classes>
+  </test> <!-- brosertest(failed) -->
+  <test thread-count="5" name="brosertest1(failed)" parallel="methods">
+    <parameter name="browsername" value="firefox"/>
+    <classes>
+      <class name="com.maven.test.com.maven.practice.MavenClass">
+        <methods>
+          <include name="browser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.maven.test.com.maven.practice.MavenClass -->
+    </classes>
+  </test> <!-- brosertest1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

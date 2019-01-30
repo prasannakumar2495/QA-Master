@@ -1,11 +1,32 @@
 package com.maven.test.com.maven.practice;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class MavenClass {
-	
-	@Test(groups= {"pk"})
+	WebDriver driver;
+	@Test
+	@Parameters("browsername")
+	private void browser(String name) {
+		// TODO Auto-generated method stub
+		if(name.equalsIgnoreCase("firefox"))
+		{
+			driver = new FirefoxDriver();
+			driver.get("www.google.com/");
+			driver.quit();
+		}
+		else if (name.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+			System.setProperty("webdriver.chrome.driver", "D:\\GIT\\QA-Master\\com.maven.practice\\chromedriver.exe");
+			driver.get("www.google.com/");
+			driver.quit();
+		}
+	}
+	/*@Test(groups= {"pk"})
 	private void run0() {
 		System.out.println("prasanna kumar");
 		Reporter.log("methods has been executed succesfully");
@@ -33,7 +54,7 @@ public class MavenClass {
 	private void run4() {
 		System.out.println("prasanna kumar");
 		Reporter.log("methods has been executed succesfully");
-	}
+	}*/
 	
 
 }
