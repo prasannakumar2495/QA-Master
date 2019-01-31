@@ -23,12 +23,12 @@ public class Rest {
 		}
 		else if (name.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-			System.setProperty("webdriver.chrome.driver", "D:\\GIT\\QA-Master\\com.maven.test\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "D:\\GIT\\QA-Master\\com.maven.test\\chromedriver.exe");
 			//ChromeDriverManager.getInstance().setup();
 		}
 		else if (name.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
-			System.setProperty("webdriver.firefox.driver","D:\\GIT\\QA-Master\\com.maven.test\\geckodriver.exe");
+			//System.setProperty("webdriver.firefox.driver","D:\\GIT\\QA-Master\\com.maven.test\\geckodriver.exe");
 		}
 		else if (name.equalsIgnoreCase("html")) {
 			driver = new HtmlUnitDriver();
