@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="TestReport2(failed)">
-    <parameter name="browsername" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test name="TestReport2(failed)" parallel="methods">
+    <parameter name="browsername" value="html"/>
     <classes>
       <class name="test.Rest">
         <methods>
           <include name="browser" invocation-numbers="0"/>
+          <include name="navigationbrowser"/>
         </methods>
       </class> <!-- test.Rest -->
     </classes>
