@@ -15,7 +15,7 @@ public class ArryaList
 	}
 	public static void main(String[] args) 
 	{
-		ArryaList pk = new ArryaList();
+		//ArryaList pk = new ArryaList();
 		ArrayList<String> object = new ArrayList();
 		object.add("prasanna");
 		object.add("kumar");
