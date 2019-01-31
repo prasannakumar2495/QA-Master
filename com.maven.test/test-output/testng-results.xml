@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5906" started-at="2019-01-31T07:09:33Z" finished-at="2019-01-31T07:09:39Z">
+  <suite name="Suite" duration-ms="10002" started-at="2019-01-31T19:06:43Z" finished-at="2019-01-31T19:06:53Z">
     <groups>
     </groups>
-    <test name="TestReport1" duration-ms="4633" started-at="2019-01-31T07:09:33Z" finished-at="2019-01-31T07:09:38Z">
+    <test name="TestReport2" duration-ms="10002" started-at="2019-01-31T19:06:43Z" finished-at="2019-01-31T19:06:53Z">
       <class name="test.Rest">
-        <test-method status="PASS" signature="browser(java.lang.String)[pri:0, instance:test.Rest@3bfdc050]" name="browser" duration-ms="2592" started-at="2019-01-31T12:39:33Z" finished-at="2019-01-31T12:39:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browser -->
-        <test-method status="PASS" signature="navigationbrowser()[pri:1, instance:test.Rest@3bfdc050]" name="navigationbrowser" duration-ms="2022" started-at="2019-01-31T12:39:36Z" finished-at="2019-01-31T12:39:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigationbrowser -->
-      </class> <!-- test.Rest -->
-    </test> <!-- TestReport1 -->
-    <test name="TestReport2" duration-ms="1235" started-at="2019-01-31T07:09:38Z" finished-at="2019-01-31T07:09:39Z">
-      <class name="test.Rest">
-        <test-method status="PASS" signature="browser(java.lang.String)[pri:0, instance:test.Rest@3abbfa04]" name="browser" duration-ms="688" started-at="2019-01-31T12:39:38Z" finished-at="2019-01-31T12:39:39Z">
+        <test-method status="PASS" signature="browser(java.lang.String)[pri:0, instance:test.Rest@6093dd95]" name="browser" duration-ms="6501" started-at="2019-02-01T00:36:43Z" finished-at="2019-02-01T00:36:50Z">
           <params>
             <param index="0">
               <value>
@@ -37,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method status="PASS" signature="navigationbrowser()[pri:1, instance:test.Rest@3abbfa04]" name="navigationbrowser" duration-ms="544" started-at="2019-01-31T12:39:39Z" finished-at="2019-01-31T12:39:39Z">
+        <test-method status="PASS" signature="navigationbrowser()[pri:1, instance:test.Rest@6093dd95]" name="navigationbrowser" duration-ms="3164" started-at="2019-02-01T00:36:50Z" finished-at="2019-02-01T00:36:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigationbrowser -->
