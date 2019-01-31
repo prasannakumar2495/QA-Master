@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
-  <test name="TestReport2(failed)" parallel="methods">
-    <parameter name="browsername" value="html"/>
+  <test name="TestReport1(failed)" parallel="methods">
+    <parameter name="browsername" value="chrome"/>
     <classes>
       <class name="test.Rest">
         <methods>
@@ -11,5 +11,5 @@
         </methods>
       </class> <!-- test.Rest -->
     </classes>
-  </test> <!-- TestReport2(failed) -->
+  </test> <!-- TestReport1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
