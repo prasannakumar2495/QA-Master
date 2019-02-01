@@ -23,7 +23,7 @@ public class Rest {
 		}
 		else if (name.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-			System.setProperty("webdriver.chrome.driver", "/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.maven.test/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\GIT\\QA-Master\\com.maven.test\\chromedriver.exe");
 			//ChromeDriverManager.getInstance().setup();
 		}
 		else if (name.equalsIgnoreCase("firefox")) {
