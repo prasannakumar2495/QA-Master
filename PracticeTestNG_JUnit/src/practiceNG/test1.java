@@ -8,6 +8,9 @@ public class test1 {
 	private void suite() {
 		// TODO Auto-generated method stub
 		System.out.println(1 +" the before suite");
+		//String a = "dhanush";
+		int b =20;
+		System.out.println("dhanuish"+b);
 	}
 
 	@BeforeTest
