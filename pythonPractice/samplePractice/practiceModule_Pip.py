@@ -3,7 +3,9 @@ Created on 07-Jan-2019
 
 @author: prasannakumar
 '''
-from Functions import * 
+import practiceTryExcept 
 
-value = my_name('prasanna', 23)
-print(value)
+output = practiceTryExcept.value
+print(output)
+
+#https://docs.python.org/3/py-modindex.html
