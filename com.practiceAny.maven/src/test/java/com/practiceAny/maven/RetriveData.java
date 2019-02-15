@@ -1,5 +1,8 @@
 package com.practiceAny.maven;
 
+import static org.testng.Assert.assertEquals;
+
+import java.awt.Container;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -33,9 +36,13 @@ public class RetriveData {
 				for (int k = 0; k <= lstclmn; k++) {
 
 					// System.out.println(wb.getSheetAt(i).getRow(j).getCell(CellReference.convertColStringToIndex(k)));
-					HSSFCell r = wb.getSheetAt(i).getRow(j).getCell(k);
+					HSSFCell r = wb.getSheetAt(i).getRow(j).getCell(lstclmn);
 
 					System.out.println(r + " contains " + c);
+					if(c.assertEquals(c, r))
+					{
+						System.out.println("done");
+					}
 				}
 
 			}
@@ -43,6 +50,6 @@ public class RetriveData {
 		}
 		// count = count++;
 		System.out.println((count++) + 1);
-
+		sampleFile.close();
 	}
 }
