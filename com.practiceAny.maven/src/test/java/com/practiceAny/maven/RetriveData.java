@@ -1,24 +1,28 @@
 package com.practiceAny.maven;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
-import java.awt.Container;
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.hssf.record.AutoFilterInfoRecord;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.CellReference;
-import org.testng.annotations.Test;
+import org.apache.poi.ss.usermodel.AutoFilter;
+import org.apache.poi.ss.usermodel.Cell;
+//import org.testng.annotations.Test;
 
 public class RetriveData {
 	public static int count = 0;
+	String data;
+	int reqrow;
+	Object r;
 
-	@Test(invocationCount = 1)
-	private void retrivedata() throws IOException {
+	// add the xml code for aspose-cell and testNG
+	// @Test(invocationCount = 1)
+	public void retrivedata() throws IOException {
 		FileInputStream sampleFile = new FileInputStream(
-				"D:\\GIT\\QA-Master\\com.practiceAny.maven\\SampleXLSFile_212kb.xls");
+				"/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/SampleXLSFile_212kb.xls");
 		HSSFWorkbook wb = new HSSFWorkbook(sampleFile);
 
 		for (int i = 0; i < 1; i++) {
@@ -30,26 +34,34 @@ public class RetriveData {
 			// from the above row the user can fetch the last cell count in the next line
 			int lstclmn = row.getLastCellNum();
 			int lstrow = sheet.getLastRowNum();
+			int frtrow = sheet.getFirstRowNum();
+
 			for (int j = 0; j <= lstrow; j++) {
+				data = wb.getSheetAt(i).getRow(j).getCell(1).getStringCellValue();
 				HSSFCell c = (HSSFCell) wb.getSheetAt(i).getRow(j).getCell(7);
-				// System.out.println(c);
-				for (int k = 0; k <= lstclmn; k++) {
-
-					// System.out.println(wb.getSheetAt(i).getRow(j).getCell(CellReference.convertColStringToIndex(k)));
-					HSSFCell r = wb.getSheetAt(i).getRow(j).getCell(lstclmn);
-
-					System.out.println(r + " contains " + c);
-					if(c.assertEquals(c, r))
-					{
-						System.out.println("done");
+				if (data.equalsIgnoreCase("Cardinal Slant-D® Ring Binder, Heavy Gauge Vinyl")) {
+					reqrow = wb.getSheetAt(i).getRow(j).getRowNum();
+					System.out.println("this is the row: " + (reqrow + 1));
+					for (int k = 1; k <= lstclmn-1; k++) {
+						// System.out.println(wb.getSheetAt(i).getRow(j).getCell(CellReference.convertColStringToIndex(k)));
+						r = wb.getSheetAt(i).getRow(reqrow).getCell(k);
+						System.out.print(r);
+						System.out.print(" ");
 					}
+					System.out.println();
 				}
-
 			}
-			System.out.println(lstclmn + " " + (lstrow+1));
+			System.out.println();
+			 System.out.println("last column:"+lstclmn + ";" +"last row: "+ (lstrow + 1)+";"+"first row: "+frtrow);
+
 		}
 		// count = count++;
-		System.out.println((count++) + 1);
+		// System.out.println((count++) + 1);
 		sampleFile.close();
+	}
+
+	public static void main(String[] args) throws IOException {
+		RetriveData ret = new RetriveData();
+		ret.retrivedata();
 	}
 }
