@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="401" started-at="2019-02-18T08:37:47Z" finished-at="2019-02-18T08:37:47Z">
+  <suite name="Default suite" duration-ms="1299" started-at="2019-02-18T12:20:25Z" finished-at="2019-02-18T12:20:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="401" started-at="2019-02-18T08:37:47Z" finished-at="2019-02-18T08:37:47Z">
+    <test name="Default test" duration-ms="1299" started-at="2019-02-18T12:20:25Z" finished-at="2019-02-18T12:20:26Z">
       <class name="com.practiceAny.maven.RetriveData">
-        <test-method status="PASS" signature="write()[pri:0, instance:com.practiceAny.maven.RetriveData@51081592]" name="write" duration-ms="383" started-at="2019-02-18T08:37:47Z" finished-at="2019-02-18T08:37:47Z">
+        <test-method status="PASS" signature="retrivedata()[pri:0, instance:com.practiceAny.maven.RetriveData@51081592]" name="retrivedata" duration-ms="1260" started-at="2019-02-18T12:20:25Z" finished-at="2019-02-18T12:20:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- write -->
+        </test-method> <!-- retrivedata -->
       </class> <!-- com.practiceAny.maven.RetriveData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
