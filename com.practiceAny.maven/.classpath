@@ -23,6 +23,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/aspose-cells-9.0.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
