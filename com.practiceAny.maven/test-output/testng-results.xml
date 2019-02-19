@@ -1,55 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1381" started-at="2019-02-19T11:23:43Z" finished-at="2019-02-19T11:23:44Z">
+  <suite name="Default suite" duration-ms="1312" started-at="2019-02-19T12:47:30Z" finished-at="2019-02-19T12:47:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1381" started-at="2019-02-19T11:23:43Z" finished-at="2019-02-19T11:23:44Z">
+    <test name="Default test" duration-ms="1312" started-at="2019-02-19T12:47:30Z" finished-at="2019-02-19T12:47:31Z">
       <class name="com.practiceAny.maven.RetriveData">
-        <test-method status="PASS" signature="retrivedata()[pri:0, instance:com.practiceAny.maven.RetriveData@5419f379]" name="retrivedata" duration-ms="1312" started-at="2019-02-19T11:23:43Z" finished-at="2019-02-19T11:23:44Z">
+        <test-method status="PASS" signature="retrivedata()[pri:0, instance:com.practiceAny.maven.RetriveData@5419f379]" name="retrivedata" duration-ms="1295" started-at="2019-02-19T12:47:30Z" finished-at="2019-02-19T12:47:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- retrivedata -->
-        <test-method status="FAIL" signature="write()[pri:1, instance:com.practiceAny.maven.RetriveData@5419f379]" name="write" duration-ms="49" started-at="2019-02-19T11:23:44Z" finished-at="2019-02-19T11:23:44Z">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[org.apache.poi.xssf.usermodel.XSSFCell cannot be cast to java.lang.String]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: org.apache.poi.xssf.usermodel.XSSFCell cannot be cast to java.lang.String
-at com.practiceAny.maven.RetriveData.write(RetriveData.java:103)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- write -->
       </class> <!-- com.practiceAny.maven.RetriveData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

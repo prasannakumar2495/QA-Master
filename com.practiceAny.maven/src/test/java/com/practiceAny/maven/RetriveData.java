@@ -26,7 +26,6 @@ public class RetriveData {
 	XSSFSheet ipsheet;
 	XSSFRow row;
 	XSSFCell cell;
-	Object[] sallreqdata;
 
 	// collections list to save all the data of the row numbers that have to be
 	// fetched.
@@ -34,6 +33,8 @@ public class RetriveData {
 
 	// collection of all the data from the required rows.
 	LinkedList<XSSFCell> allreqdata = new LinkedList<XSSFCell>();
+
+	LinkedList<String> sallreqdata = new LinkedList<String>();
 
 	// add the xml code for testNG
 	@Test(priority = 0)
@@ -77,86 +78,53 @@ public class RetriveData {
 
 		}
 		sampleFile.close();
-		for (int i1 = 0; i1 < allreqdata.size(); i1++) {
-			if (allreqdata.get(i1) != null) {
-				System.out.println(allreqdata.get(i1));
-				System.out.println(allreqdata.get(i1).getClass().getSimpleName());
-				
-			} else {
-				System.out.println("N/A" + ",");
+		/*for (int i1 = 0; i1 < allreqdata.size(); i1++) {
+			System.out.println(allreqdata);
+			
+		}*/
+		for(XSSFCell asap: allreqdata){
+			{
+				System.out.println(asap);
+				/*sallreqdata.add(allreqdata.toString());
+				for (String xssfSheet : sallreqdata) {
+					System.out.println(xssfSheet);
+				}*/
 			}
 		}
 	}
 
-	@Test(priority = 1, invocationCount = 1)
+	@Test(priority = 1, invocationCount = 0)
 	public void write() throws IOException {
 		XSSFWorkbook wwb = new XSSFWorkbook();
 		XSSFSheet opsheet = wwb.createSheet("New Filtered Data");
-		for (int i = 0; i < allreqdata.size(); i++) {
+		for (int i = 0; i < allreqrow.size(); i++) {
 			XSSFRow oprow = opsheet.createRow(i);
-			
-			
-			 for(Object obj : allreqdata)
-		        {
-				 System.out.println(obj);
-					Cell cell = oprow.createCell(i);
-					//cell.setCellValue((String) obj);
-		            if(obj.getClass().getSimpleName() != null)
-		            {
-		                cell.setCellValue((String) obj);
-		            }
-		            else if(obj.getClass().getSimpleName()=="Boolean")
-		            {
-		                cell.setCellValue((Boolean) obj);
-		            }
-		            else if(obj.getClass().getSimpleName()=="String")
-		            {
-		                cell.setCellValue((String) obj);
-		            }
-		            else if(obj.getClass().getSimpleName()=="Double")
-		            {
-		                 cell.setCellValue((Double) obj);
-		            }
-		        
-				 /*
-		            if(obj instanceof Date)
-		            {
-		                cell.setCellValue((Date) obj);
-		            }
-		            else if(obj instanceof Boolean)
-		            {
-		                cell.setCellValue((Boolean) obj);
-		            }
-		            else if(obj instanceof String)
-		            {
-		                cell.setCellValue((String) obj);
-		            }
-		            else if(obj instanceof Double)
-		            {
-		                 cell.setCellValue((Double) obj);
-		            }
-		        */}
+			for(XSSFCell c1:allreqdata)
+			{	
+				count++;
+				for(int z=0;z<=count;z++)
+				{
+					Cell cell = oprow.createCell(z);
+					cell.setCellValue();
+				}
+			}
+			/*for (String obj : sallreqdata) {
+				// System.out.println(obj);
+				Cell cell = oprow.createCell(i);
+				// cell.setCellValue((String) obj);
+				String STRING = obj.getClass().getSimpleName();
+				cell.setCellValue(obj);
 
-			/*for (Object x : allreqdata) {
-
-				
-				  //cell.setValue(x); 
-				if(((Cell) x).getCellType()==x.CELL_TYPE_STRING) {
-				  cell.setCellValue(x.toString()); 
-				  } 
-				else if(x.getCellType()==x.CELL_TYPE_NUMERIC) { 
-					cell.setCellNum((int)x); 
-					}
-				  
-				 }*/
-
+			}*/
 		}
-		
-		  FileOutputStream fos = new FileOutputStream( new
-		  File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
-		  wwb.write(fos); fos.flush(); fos.close();
-		  System.out.println("createworkbook.xlsx written successfully");
-		 
+
+		FileOutputStream fos = new FileOutputStream(
+				new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
+		wwb.write(fos);
+		fos.flush();
+		fos.close();
+		System.out.println("createworkbook.xlsx written successfully");
+
 	}
 
 	/*
