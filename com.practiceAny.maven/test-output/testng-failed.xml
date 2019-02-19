@@ -5,7 +5,7 @@
     <classes>
       <class name="com.practiceAny.maven.RetriveData">
         <methods>
-          <include name="retrivedata"/>
+          <include name="write"/>
         </methods>
       </class> <!-- com.practiceAny.maven.RetriveData -->
     </classes>
