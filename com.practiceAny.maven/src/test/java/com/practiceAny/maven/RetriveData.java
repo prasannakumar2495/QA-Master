@@ -1,22 +1,16 @@
 package com.practiceAny.maven;
 
-import java.io.File;
-
-//import static org.testng.Assert.assertEquals;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
-import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 
 import org.testng.annotations.Test;
 //import org.testng.annotations.Test;
 
 public class RetriveData {
-	public static int count = 0;
+	int count = 0;
 	String data;
 	int reqrow;
 	XSSFCell r;
@@ -25,23 +19,32 @@ public class RetriveData {
 	int frtrow;
 	XSSFSheet ipsheet;
 	XSSFRow row;
-	XSSFCell cell;
-
+	FileInputStream sampleFile;
+	FileOutputStream fos;
+	DataFormatter dataFormatter = new DataFormatter();
+	String cellValue;
+	Cell newcell;
+	// for the properties files
+	FileInputStream fis;
+	Properties prop = new Properties();
+	int sizeOfFilter;
 	// collections list to save all the data of the row numbers that have to be
 	// fetched.
 	List<Integer> allreqrow = new ArrayList<Integer>();
-
 	// collection of all the data from the required rows.
-	LinkedList<XSSFCell> allreqdata = new LinkedList<XSSFCell>();
-
-	LinkedList<String> sallreqdata = new LinkedList<String>();
+	LinkedList<String> allreqdata = new LinkedList<String>();
 
 	// add the xml code for testNG
 	@Test(priority = 0)
 	public void retrivedata() throws IOException {
-		FileInputStream sampleFile = new FileInputStream(
-				"D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (ip).xls");
+
+		sampleFile = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (ip).xls");
+
 		XSSFWorkbook wb = new XSSFWorkbook(sampleFile);
+		// loading the properties file
+		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
+		prop.load(fis);
+		sizeOfFilter = Integer.parseInt(prop.getProperty("size"));
 
 		for (int i = 0; i < 1; i++) {
 			ipsheet = wb.getSheetAt(i);
@@ -55,80 +58,62 @@ public class RetriveData {
 			for (int j = 0; j <= lstrow; j++) {
 				try {
 					data = wb.getSheetAt(i).getRow(j).getCell(1).getStringCellValue();
-					if (data.equalsIgnoreCase("Abdulla Khaliq Shaikh")) {
-						reqrow = wb.getSheetAt(i).getRow(j).getRowNum();
-						System.out.println("this is the row: " + (reqrow + 1));
-						allreqrow.add((reqrow + 1));
-						for (int k = 1; k <= (lstclmn - 1); k++) {
-							// System.out.println(wb.getSheetAt(i).getRow(j).getCell(CellReference.convertColStringToIndex(k)));
-							r = wb.getSheetAt(i).getRow(reqrow).getCell(k);
-							System.out.print(" ");
-							allreqdata.add(r);
+					for (int p = 0; p <= sizeOfFilter; p++) {
+						String q = Integer.toString(p);
+						// valuesFromPropertiesFiles.add(q);
+						if (data.equalsIgnoreCase(prop.getProperty(q))) {
+							reqrow = wb.getSheetAt(i).getRow(j).getRowNum();
+							System.out.println("this is the row: " + (reqrow + 1));
+							allreqrow.add((reqrow + 1));
+							for (int k = 1; k <= (lstclmn - 1); k++) {
+								// System.out.println(wb.getSheetAt(i).getRow(j).getCell(CellReference.convertColStringToIndex(k)));
+								r = wb.getSheetAt(i).getRow(reqrow).getCell(k);
+								cellValue = dataFormatter.formatCellValue(r);
+								System.out.print(" ");
+								allreqdata.add(cellValue);
+							}
+							System.out.println();
 						}
-						System.out.println();
 					}
 				} catch (Exception e) {
 					// e.printStackTrace();
-					// System.out.println("done with retriving");
+					System.out.println("data retriving is done");
 				}
 			}
 			System.out.println();
 			System.out.println(
 					"last column:" + (lstclmn - 1) + ";" + "last row: " + (lstrow) + ";" + "first row: " + frtrow);
-
 		}
 		sampleFile.close();
-		/*for (int i1 = 0; i1 < allreqdata.size(); i1++) {
-			System.out.println(allreqdata);
-			
-		}*/
-		for(XSSFCell asap: allreqdata){
+		for (String asap : allreqdata) {
 			{
-				System.out.println(asap);
-				/*sallreqdata.add(allreqdata.toString());
-				for (String xssfSheet : sallreqdata) {
-					System.out.println(xssfSheet);
-				}*/
+				System.out.println("the values in the cell are: " + asap);
+
 			}
 		}
 	}
 
-	@Test(priority = 1, invocationCount = 0)
+	@Test(priority = 1, invocationCount = 1)
 	public void write() throws IOException {
 		XSSFWorkbook wwb = new XSSFWorkbook();
 		XSSFSheet opsheet = wwb.createSheet("New Filtered Data");
-		for (int i = 0; i < allreqrow.size(); i++) {
-			XSSFRow oprow = opsheet.createRow(i);
-			for(XSSFCell c1:allreqdata)
-			{	
+		for (int i = 0; i < sizeOfFilter; i++) {
+			for (String opdata : allreqdata) {
+				XSSFRow oprow = opsheet.createRow(i);
 				count++;
-				for(int z=0;z<=count;z++)
-				{
-					Cell cell = oprow.createCell(z);
-					cell.setCellValue();
+				for (int a = 0; a < lstclmn; a++) {
+					
+					newcell = oprow.createCell(count);
+					System.out.println("the values entered into the cell are: " + opdata);
+					newcell.setCellValue(opdata);
 				}
 			}
-			/*for (String obj : sallreqdata) {
-				// System.out.println(obj);
-				Cell cell = oprow.createCell(i);
-				// cell.setCellValue((String) obj);
-				String STRING = obj.getClass().getSimpleName();
-				cell.setCellValue(obj);
-
-			}*/
 		}
-
-		FileOutputStream fos = new FileOutputStream(
-				new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
+		fos = new FileOutputStream(new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
 		wwb.write(fos);
 		fos.flush();
 		fos.close();
 		System.out.println("createworkbook.xlsx written successfully");
 
 	}
-
-	/*
-	 * public static void main(String[] args) throws IOException { RetriveData ret =
-	 * new RetriveData(); ret.retrivedata(); }
-	 */
 }
