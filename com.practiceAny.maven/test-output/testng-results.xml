@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7037" started-at="2019-02-20T11:23:26Z" finished-at="2019-02-20T11:23:33Z">
+  <suite name="Default suite" duration-ms="1940" started-at="2019-02-20T12:17:10Z" finished-at="2019-02-20T12:17:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7037" started-at="2019-02-20T11:23:26Z" finished-at="2019-02-20T11:23:33Z">
+    <test name="Default test" duration-ms="1940" started-at="2019-02-20T12:17:10Z" finished-at="2019-02-20T12:17:12Z">
       <class name="com.practiceAny.maven.RetriveData">
-        <test-method status="PASS" signature="retrivedata()[pri:0, instance:com.practiceAny.maven.RetriveData@4678c730]" name="retrivedata" duration-ms="1342" started-at="2019-02-20T11:23:26Z" finished-at="2019-02-20T11:23:28Z">
+        <test-method status="PASS" signature="retrivedata()[pri:0, instance:com.practiceAny.maven.RetriveData@4678c730]" name="retrivedata" duration-ms="1382" started-at="2019-02-20T12:17:10Z" finished-at="2019-02-20T12:17:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- retrivedata -->
-        <test-method status="PASS" signature="write()[pri:1, instance:com.practiceAny.maven.RetriveData@4678c730]" name="write" duration-ms="5677" started-at="2019-02-20T11:23:28Z" finished-at="2019-02-20T11:23:33Z">
+        <test-method status="PASS" signature="write()[pri:1, instance:com.practiceAny.maven.RetriveData@4678c730]" name="write" duration-ms="537" started-at="2019-02-20T12:17:11Z" finished-at="2019-02-20T12:17:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- write -->

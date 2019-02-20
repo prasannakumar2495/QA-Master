@@ -72,6 +72,7 @@ public class RetriveData {
 								System.out.print(" ");
 								allreqdata.add(cellValue);
 							}
+							
 							System.out.println();
 						}
 					}
@@ -79,34 +80,34 @@ public class RetriveData {
 					// e.printStackTrace();
 					System.out.println("data retriving is done");
 				}
+				
 			}
 			System.out.println();
 			System.out.println(
 					"last column:" + (lstclmn - 1) + ";" + "last row: " + (lstrow) + ";" + "first row: " + frtrow);
 		}
 		sampleFile.close();
-		for (String asap : allreqdata) {
-			{
-				System.out.println("the values in the cell are: " + asap);
-
-			}
-		}
+		/*
+		 * for (String asap : allreqdata) {
+		 * System.out.println("the values in the cell are: " + asap); }
+		 */
 	}
 
-	@Test(priority = 1, invocationCount = 1)
+	@Test(priority=1,invocationCount=1)
 	public void write() throws IOException {
 		XSSFWorkbook wwb = new XSSFWorkbook();
 		XSSFSheet opsheet = wwb.createSheet("New Filtered Data");
 		for (int i = 0; i < sizeOfFilter; i++) {
-			for (String opdata : allreqdata) {
+			for (int a = 0; a <= lstclmn; a++) {
 				XSSFRow oprow = opsheet.createRow(i);
-				count++;
-				for (int a = 0; a < lstclmn; a++) {
+				for (String opdata : allreqdata) {
+					count++;
 					
 					newcell = oprow.createCell(count);
 					System.out.println("the values entered into the cell are: " + opdata);
 					newcell.setCellValue(opdata);
 				}
+				break;
 			}
 		}
 		fos = new FileOutputStream(new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
