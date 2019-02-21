@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 public class RetriveData {
 	int count = 0;
+	double countopdata;
 	String data;
 	int reqrow;
 	XSSFCell r;
@@ -24,6 +25,7 @@ public class RetriveData {
 	DataFormatter dataFormatter = new DataFormatter();
 	String cellValue;
 	Cell newcell;
+	XSSFRow oprow;
 	// for the properties files
 	FileInputStream fis;
 	Properties prop = new Properties();
@@ -38,11 +40,11 @@ public class RetriveData {
 	@Test(priority = 0)
 	public void retrivedata() throws IOException {
 
-		sampleFile = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (ip).xls");
+		sampleFile = new FileInputStream("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/EmployeeMaster (ip).xls");
 
 		XSSFWorkbook wb = new XSSFWorkbook(sampleFile);
 		// loading the properties file
-		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
+		fis = new FileInputStream("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/property.properties");
 		prop.load(fis);
 		sizeOfFilter = Integer.parseInt(prop.getProperty("size"));
 
@@ -87,31 +89,44 @@ public class RetriveData {
 					"last column:" + (lstclmn - 1) + ";" + "last row: " + (lstrow) + ";" + "first row: " + frtrow);
 		}
 		sampleFile.close();
-		/*
-		 * for (String asap : allreqdata) {
-		 * System.out.println("the values in the cell are: " + asap); }
-		 */
 	}
 
 	@Test(priority=1,invocationCount=1)
 	public void write() throws IOException {
-		XSSFWorkbook wwb = new XSSFWorkbook();
-		XSSFSheet opsheet = wwb.createSheet("New Filtered Data");
+		XSSFWorkbook opwb = new XSSFWorkbook();
+		XSSFSheet opsheet = opwb.createSheet("New Filtered Data");
 		for (int i = 0; i < sizeOfFilter; i++) {
 			for (int a = 0; a <= lstclmn; a++) {
-				XSSFRow oprow = opsheet.createRow(i);
+				oprow = opsheet.createRow(i);
+				
 				for (String opdata : allreqdata) {
 					count++;
 					
-					newcell = oprow.createCell(count);
-					System.out.println("the values entered into the cell are: " + opdata);
-					newcell.setCellValue(opdata);
+					System.out.println(count);
+					System.out.println(count / (lstclmn-1));
+					System.out.println();
+					if(count / (lstclmn-1)==1.0)
+					{
+						countopdata++;
+						oprow = opsheet.createRow((int) countopdata);
+						newcell = oprow.createCell((int) countopdata);
+						System.out.println(countopdata+"the values entered into the cell are: " + opdata);
+						newcell.setCellValue(opdata);
+						count=0;
+					}else
+					{
+						newcell = oprow.createCell(count);
+						System.out.println("the values entered into the cell are: " + opdata);
+						newcell.setCellValue(opdata);
+					}
+					
 				}
 				break;
 			}
+			break;
 		}
-		fos = new FileOutputStream(new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
-		wwb.write(fos);
+		fos = new FileOutputStream(new File("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/EmployeeMaster (op).xls"));
+		opwb.write(fos);
 		fos.flush();
 		fos.close();
 		System.out.println("createworkbook.xlsx written successfully");
