@@ -7,11 +7,11 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 
 import org.testng.annotations.Test;
-//import org.testng.annotations.Test;
 
 public class RetriveData {
+	int rownum = 0;
 	int count = 0;
-	double countopdata;
+	int countopdata = 0;
 	String data;
 	int reqrow;
 	XSSFCell r;
@@ -39,15 +39,12 @@ public class RetriveData {
 	// add the xml code for testNG
 	@Test(priority = 0)
 	public void retrivedata() throws IOException {
-
-		sampleFile = new FileInputStream("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/EmployeeMaster (ip).xls");
-
+		sampleFile = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (ip).xls");
 		XSSFWorkbook wb = new XSSFWorkbook(sampleFile);
 		// loading the properties file
-		fis = new FileInputStream("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/property.properties");
+		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
 		prop.load(fis);
 		sizeOfFilter = Integer.parseInt(prop.getProperty("size"));
-
 		for (int i = 0; i < 1; i++) {
 			ipsheet = wb.getSheetAt(i);
 			row = null;
@@ -59,7 +56,7 @@ public class RetriveData {
 			frtrow = ipsheet.getFirstRowNum();
 			for (int j = 0; j <= lstrow; j++) {
 				try {
-					data = wb.getSheetAt(i).getRow(j).getCell(1).getStringCellValue();
+					data = wb.getSheetAt(i).getRow(j).getCell(2).getStringCellValue();
 					for (int p = 0; p <= sizeOfFilter; p++) {
 						String q = Integer.toString(p);
 						// valuesFromPropertiesFiles.add(q);
@@ -74,7 +71,6 @@ public class RetriveData {
 								System.out.print(" ");
 								allreqdata.add(cellValue);
 							}
-							
 							System.out.println();
 						}
 					}
@@ -82,7 +78,6 @@ public class RetriveData {
 					// e.printStackTrace();
 					System.out.println("data retriving is done");
 				}
-				
 			}
 			System.out.println();
 			System.out.println(
@@ -91,45 +86,48 @@ public class RetriveData {
 		sampleFile.close();
 	}
 
-	@Test(priority=1,invocationCount=1)
+	@Test(priority = 1, invocationCount = 1)
 	public void write() throws IOException {
 		XSSFWorkbook opwb = new XSSFWorkbook();
 		XSSFSheet opsheet = opwb.createSheet("New Filtered Data");
 		for (int i = 0; i < sizeOfFilter; i++) {
 			for (int a = 0; a <= lstclmn; a++) {
 				oprow = opsheet.createRow(i);
-				
 				for (String opdata : allreqdata) {
 					count++;
-					
 					System.out.println(count);
-					System.out.println(count / (lstclmn-1));
+					System.out.println(count / (lstclmn));
 					System.out.println();
-					if(count / (lstclmn-1)==1.0)
-					{
+					if (count / (lstclmn) == 1) {
+						int strtcell = 1;
 						countopdata++;
-						oprow = opsheet.createRow((int) countopdata);
-						newcell = oprow.createCell((int) countopdata);
-						System.out.println(countopdata+"the values entered into the cell are: " + opdata);
+						oprow = opsheet.createRow(countopdata);
+						newcell = oprow.createCell(0);
+						newcell.setCellValue(countopdata + 1);
+						newcell = oprow.createCell(strtcell);
+						System.out.println(" the values entered into the cell: " + strtcell + " is: " + opdata);
 						newcell.setCellValue(opdata);
-						count=0;
-					}else
-					{
+						count = 1;
+					} else {
+						if(countopdata==0)
+						{
+							newcell = oprow.createCell(0);
+							newcell.setCellValue(1);
+						}
 						newcell = oprow.createCell(count);
-						System.out.println("the values entered into the cell are: " + opdata);
+						System.out.println("the values entered into the cell: " + count + " is: " + opdata);
 						newcell.setCellValue(opdata);
 					}
-					
 				}
 				break;
 			}
 			break;
 		}
-		fos = new FileOutputStream(new File("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/EmployeeMaster (op).xls"));
+		fos = new FileOutputStream(
+				new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (ip) - Copy.xls"));
 		opwb.write(fos);
 		fos.flush();
 		fos.close();
 		System.out.println("createworkbook.xlsx written successfully");
-
 	}
 }
