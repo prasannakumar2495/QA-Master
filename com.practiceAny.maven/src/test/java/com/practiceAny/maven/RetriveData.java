@@ -56,7 +56,7 @@ public class RetriveData {
 			frtrow = ipsheet.getFirstRowNum();
 			for (int j = 0; j <= lstrow; j++) {
 				try {
-					data = wb.getSheetAt(i).getRow(j).getCell(2).getStringCellValue();
+					data = wb.getSheetAt(i).getRow(j).getCell(1).getStringCellValue();
 					for (int p = 0; p <= sizeOfFilter; p++) {
 						String q = Integer.toString(p);
 						// valuesFromPropertiesFiles.add(q);
@@ -124,7 +124,7 @@ public class RetriveData {
 			break;
 		}
 		fos = new FileOutputStream(
-				new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (ip) - Copy.xls"));
+				new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
 		opwb.write(fos);
 		fos.flush();
 		fos.close();
