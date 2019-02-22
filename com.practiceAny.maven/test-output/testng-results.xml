@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1428" started-at="2019-02-21T12:26:57Z" finished-at="2019-02-21T12:26:58Z">
+  <suite name="Default suite" duration-ms="1687" started-at="2019-02-22T07:35:02Z" finished-at="2019-02-22T07:35:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1428" started-at="2019-02-21T12:26:57Z" finished-at="2019-02-21T12:26:58Z">
-      <class name="com.practiceAny.maven.RetriveData">
-        <test-method status="PASS" signature="retrivedata()[pri:0, instance:com.practiceAny.maven.RetriveData@4678c730]" name="retrivedata" duration-ms="1286" started-at="2019-02-21T12:26:57Z" finished-at="2019-02-21T12:26:58Z">
+    <test name="Default test" duration-ms="1687" started-at="2019-02-22T07:35:02Z" finished-at="2019-02-22T07:35:04Z">
+      <class name="com.practiceAny.maven.FileInput1">
+        <test-method status="PASS" signature="fileInput()[pri:0, instance:com.practiceAny.maven.FileInput1@4678c730]" name="fileInput" duration-ms="1525" started-at="2019-02-22T07:35:02Z" finished-at="2019-02-22T07:35:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fileInput -->
+        <test-method status="PASS" signature="retrivedata()[pri:1, instance:com.practiceAny.maven.FileInput1@4678c730]" name="retrivedata" duration-ms="32" started-at="2019-02-22T07:35:04Z" finished-at="2019-02-22T07:35:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- retrivedata -->
-        <test-method status="PASS" signature="write()[pri:1, instance:com.practiceAny.maven.RetriveData@4678c730]" name="write" duration-ms="129" started-at="2019-02-21T12:26:58Z" finished-at="2019-02-21T12:26:58Z">
+        <test-method status="PASS" signature="write()[pri:2, instance:com.practiceAny.maven.FileInput1@4678c730]" name="write" duration-ms="108" started-at="2019-02-22T07:35:04Z" finished-at="2019-02-22T07:35:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- write -->
-      </class> <!-- com.practiceAny.maven.RetriveData -->
+      </class> <!-- com.practiceAny.maven.FileInput1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

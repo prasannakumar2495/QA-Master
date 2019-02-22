@@ -8,7 +8,7 @@ import org.apache.poi.xssf.usermodel.*;
 
 import org.testng.annotations.Test;
 
-public class RetriveData {
+public class FileInput1 {
 	int rownum = 0;
 	int count = 0;
 	int countopdata = 0;
@@ -26,24 +26,35 @@ public class RetriveData {
 	String cellValue;
 	Cell newcell;
 	XSSFRow oprow;
+	XSSFWorkbook wb;
+
 	// for the properties files
 	FileInputStream fis;
 	Properties prop = new Properties();
 	int sizeOfFilter;
+
 	// collections list to save all the data of the row numbers that have to be
 	// fetched.
 	List<Integer> allreqrow = new ArrayList<Integer>();
+
 	// collection of all the data from the required rows.
 	LinkedList<String> allreqdata = new LinkedList<String>();
 
-	// add the xml code for testNG
 	@Test(priority = 0)
-	public void retrivedata() throws IOException {
-		sampleFile = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (ip).xls");
-		XSSFWorkbook wb = new XSSFWorkbook(sampleFile);
-		// loading the properties file
+	public void fileInput() throws Exception {
 		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
 		prop.load(fis);
+		sampleFile = new FileInputStream(prop.getProperty("inputfile1Path"));
+		wb = new XSSFWorkbook(sampleFile);
+	}
+	@Test(priority = 1)
+	public void retrivedata() throws IOException {
+		/*fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
+		prop.load(fis);
+		sampleFile = new FileInputStream(prop.getProperty("inputfile1Path"));
+		XSSFWorkbook wb = new XSSFWorkbook(sampleFile);*/
+		// loading the properties file
+
 		sizeOfFilter = Integer.parseInt(prop.getProperty("size"));
 		for (int i = 0; i < 1; i++) {
 			ipsheet = wb.getSheetAt(i);
@@ -65,7 +76,6 @@ public class RetriveData {
 							System.out.println("this is the row: " + (reqrow + 1));
 							allreqrow.add((reqrow + 1));
 							for (int k = 1; k <= (lstclmn - 1); k++) {
-								// System.out.println(wb.getSheetAt(i).getRow(j).getCell(CellReference.convertColStringToIndex(k)));
 								r = wb.getSheetAt(i).getRow(reqrow).getCell(k);
 								cellValue = dataFormatter.formatCellValue(r);
 								System.out.print(" ");
@@ -86,7 +96,7 @@ public class RetriveData {
 		sampleFile.close();
 	}
 
-	@Test(priority = 1, invocationCount = 1)
+	@Test(priority = 2, invocationCount = 1)
 	public void write() throws IOException {
 		XSSFWorkbook opwb = new XSSFWorkbook();
 		XSSFSheet opsheet = opwb.createSheet("New Filtered Data");
@@ -109,8 +119,7 @@ public class RetriveData {
 						newcell.setCellValue(opdata);
 						count = 1;
 					} else {
-						if(countopdata==0)
-						{
+						if (countopdata == 0) {
 							newcell = oprow.createCell(0);
 							newcell.setCellValue(1);
 						}
@@ -123,8 +132,7 @@ public class RetriveData {
 			}
 			break;
 		}
-		fos = new FileOutputStream(
-				new File("D:\\GIT\\QA-Master\\com.practiceAny.maven\\EmployeeMaster (op).xls"));
+		fos = new FileOutputStream(new File(prop.getProperty("outputfile")));
 		opwb.write(fos);
 		fos.flush();
 		fos.close();
