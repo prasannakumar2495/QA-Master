@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1687" started-at="2019-02-22T07:35:02Z" finished-at="2019-02-22T07:35:04Z">
+  <suite started-at="2019-02-24T10:56:17Z" name="Default suite" finished-at="2019-02-24T10:56:24Z" duration-ms="6753">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1687" started-at="2019-02-22T07:35:02Z" finished-at="2019-02-22T07:35:04Z">
+    <test started-at="2019-02-24T10:56:17Z" name="Default test" finished-at="2019-02-24T10:56:24Z" duration-ms="6753">
       <class name="com.practiceAny.maven.FileInput1">
-        <test-method status="PASS" signature="fileInput()[pri:0, instance:com.practiceAny.maven.FileInput1@4678c730]" name="fileInput" duration-ms="1525" started-at="2019-02-22T07:35:02Z" finished-at="2019-02-22T07:35:04Z">
+        <test-method signature="fileInput()[pri:0, instance:com.practiceAny.maven.FileInput1@68267da0]" started-at="2019-02-24T10:56:17Z" name="fileInput" finished-at="2019-02-24T10:56:22Z" duration-ms="5150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fileInput -->
-        <test-method status="PASS" signature="retrivedata()[pri:1, instance:com.practiceAny.maven.FileInput1@4678c730]" name="retrivedata" duration-ms="32" started-at="2019-02-22T07:35:04Z" finished-at="2019-02-22T07:35:04Z">
+        <test-method signature="retrivedata()[pri:1, instance:com.practiceAny.maven.FileInput1@68267da0]" started-at="2019-02-24T10:56:22Z" name="retrivedata" finished-at="2019-02-24T10:56:23Z" duration-ms="309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- retrivedata -->
-        <test-method status="PASS" signature="write()[pri:2, instance:com.practiceAny.maven.FileInput1@4678c730]" name="write" duration-ms="108" started-at="2019-02-22T07:35:04Z" finished-at="2019-02-22T07:35:04Z">
+        <test-method signature="write()[pri:2, instance:com.practiceAny.maven.FileInput1@68267da0]" started-at="2019-02-24T10:56:23Z" name="write" finished-at="2019-02-24T10:56:24Z" duration-ms="1227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- write -->

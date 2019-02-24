@@ -42,7 +42,7 @@ public class FileInput1 {
 
 	@Test(priority = 0)
 	public void fileInput() throws Exception {
-		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
+		fis = new FileInputStream("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/property.properties");
 		prop.load(fis);
 		sampleFile = new FileInputStream(prop.getProperty("inputfile1Path"));
 		wb = new XSSFWorkbook(sampleFile);
