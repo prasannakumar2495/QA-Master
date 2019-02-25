@@ -1,4 +1,4 @@
-package com.practiceAny.maven;
+package ExcelFilter;
 
 import java.io.*;
 import java.util.*;
@@ -38,23 +38,18 @@ public class FileInput1 {
 	List<Integer> allreqrow = new ArrayList<Integer>();
 
 	// collection of all the data from the required rows.
-	LinkedList<String> allreqdata = new LinkedList<String>();
+	LinkedList<String> allreqdata1 = new LinkedList<String>();
 
 	@Test(priority = 0)
 	public void fileInput() throws Exception {
-		fis = new FileInputStream("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/property.properties");
+		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
 		prop.load(fis);
 		sampleFile = new FileInputStream(prop.getProperty("inputfile1Path"));
 		wb = new XSSFWorkbook(sampleFile);
 	}
-	@Test(priority = 1)
-	public void retrivedata() throws IOException {
-		/*fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property.properties");
-		prop.load(fis);
-		sampleFile = new FileInputStream(prop.getProperty("inputfile1Path"));
-		XSSFWorkbook wb = new XSSFWorkbook(sampleFile);*/
-		// loading the properties file
 
+	@Test(invocationCount = 1,priority = 1)
+	public void retrivedata() throws IOException {
 		sizeOfFilter = Integer.parseInt(prop.getProperty("size"));
 		for (int i = 0; i < 1; i++) {
 			ipsheet = wb.getSheetAt(i);
@@ -70,7 +65,6 @@ public class FileInput1 {
 					data = wb.getSheetAt(i).getRow(j).getCell(1).getStringCellValue();
 					for (int p = 0; p <= sizeOfFilter; p++) {
 						String q = Integer.toString(p);
-						// valuesFromPropertiesFiles.add(q);
 						if (data.equalsIgnoreCase(prop.getProperty(q))) {
 							reqrow = wb.getSheetAt(i).getRow(j).getRowNum();
 							System.out.println("this is the row: " + (reqrow + 1));
@@ -79,7 +73,7 @@ public class FileInput1 {
 								r = wb.getSheetAt(i).getRow(reqrow).getCell(k);
 								cellValue = dataFormatter.formatCellValue(r);
 								System.out.print(" ");
-								allreqdata.add(cellValue);
+								allreqdata1.add(cellValue);
 							}
 							System.out.println();
 						}
@@ -96,14 +90,14 @@ public class FileInput1 {
 		sampleFile.close();
 	}
 
-	@Test(priority = 2, invocationCount = 1)
+	@Test(priority = 2, invocationCount = 0)
 	public void write() throws IOException {
 		XSSFWorkbook opwb = new XSSFWorkbook();
 		XSSFSheet opsheet = opwb.createSheet("New Filtered Data");
 		for (int i = 0; i < sizeOfFilter; i++) {
 			for (int a = 0; a <= lstclmn; a++) {
 				oprow = opsheet.createRow(i);
-				for (String opdata : allreqdata) {
+				for (String opdata : allreqdata1) {
 					count++;
 					System.out.println(count);
 					System.out.println(count / (lstclmn));
