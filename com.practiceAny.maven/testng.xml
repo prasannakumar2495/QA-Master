@@ -3,9 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="ExcelFilter.FileInput1"/>
       <class name="ExcelFilter.FileInput2"/>
-      <class name="ExcelFilter.Compare2Files"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1361" started-at="2019-02-25T08:23:22Z" finished-at="2019-02-25T08:23:24Z">
+  <suite name="Default suite" duration-ms="1416" started-at="2019-02-27T13:08:21Z" finished-at="2019-02-27T13:08:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1361" started-at="2019-02-25T08:23:22Z" finished-at="2019-02-25T08:23:24Z">
-      <class name="ExcelFilter.Compare2Files">
-        <test-method status="PASS" signature="comparename()[pri:0, instance:ExcelFilter.Compare2Files@7f9a81e8]" name="comparename" duration-ms="1343" started-at="2019-02-25T08:23:22Z" finished-at="2019-02-25T08:23:24Z">
+    <test name="Default test" duration-ms="1416" started-at="2019-02-27T13:08:21Z" finished-at="2019-02-27T13:08:22Z">
+      <class name="ExcelFilter.Filter2Files">
+        <test-method status="PASS" signature="eachFile()[pri:0, instance:ExcelFilter.Filter2Files@4678c730]" name="eachFile" duration-ms="1399" started-at="2019-02-27T13:08:21Z" finished-at="2019-02-27T13:08:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- comparename -->
-      </class> <!-- ExcelFilter.Compare2Files -->
+        </test-method> <!-- eachFile -->
+      </class> <!-- ExcelFilter.Filter2Files -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -8,7 +8,7 @@ import org.apache.poi.xssf.usermodel.*;
 
 import org.testng.annotations.Test;
 
-public class FileInput1 {
+public class DefaultFilterWrite {
 	int rownum = 0;
 	int count = 0;
 	int countopdata = 0;

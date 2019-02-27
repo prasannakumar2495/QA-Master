@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.practiceAny.maven.FileInput2">
+      <class name="ExcelFilter.FileInput2">
         <methods>
           <include name="retrivedata"/>
         </methods>
-      </class> <!-- com.practiceAny.maven.FileInput2 -->
+      </class> <!-- ExcelFilter.FileInput2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
