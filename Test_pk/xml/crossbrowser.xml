@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="testNG">
-	<test name="crossbrowser">
-	<classes>
-	<class name="practice.Words"></class>
-	<class name="practice.firefox"></class></classes>
-	</test>
-</suite>

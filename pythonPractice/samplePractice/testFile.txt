@@ -1,6 +1,0 @@
-name : prasann kumar
-age : 23
-number : 7995932592company : Emids
-experience: 10 monthscompany : Emids
-experience: 10 monthscompany : Emids
-experience: 10 months
