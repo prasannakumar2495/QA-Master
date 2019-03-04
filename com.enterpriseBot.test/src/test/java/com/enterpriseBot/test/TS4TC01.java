@@ -11,13 +11,14 @@ import org.testng.annotations.Test;
 
 public class TS4TC01 {
 	WebDriver driver;
-	JavascriptExecutor jse;
+	List<WebElement> options;
+	WebDriverWait wait;
 
 	@Test(priority = 0)
 	private void dashboard() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "D:\\GIT\\QA-Master\\com.enterpriseBot.test\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		driver = new ChromeDriver();
+		wait = new WebDriverWait(driver, 30);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
@@ -35,27 +36,34 @@ public class TS4TC01 {
 		clicksearchvalue.click();
 		Thread.sleep(5000);
 
-		String data = "prasanna kumar money35";
+		String data = "prasanna kumar FINAL";
 		WebElement AddTrigger = driver.findElement(By.xpath("//input[@placeholder='Add triggers']"));
 		AddTrigger.sendKeys(data);
 		AddTrigger.sendKeys(Keys.ENTER);
+		Thread.sleep(5000);
 		WebElement SAVE = driver
 				.findElement(By.xpath("//button[@class='btn btn-success agent-save-button'][@id='intent-save-btn']"));
 		SAVE.click();
+		
 		Thread.sleep(5000);
 
-		driver.findElement(By.xpath("//input[@placeholder='Search triggers...']")).sendKeys("prasanna kumar money35");
-		List<WebElement> options = driver.findElements(By.xpath(
-				"//ul[@class='trigger-list-group col-lg-12 col-md-12 col-sm-12']//li/descendant::div[@placeholder='Add triggers']"));
+		driver.findElement(By.xpath("//input[@placeholder='Search triggers...']")).sendKeys("prasanna kumar FINAL");
 		Thread.sleep(3000);
-		for (WebElement results : options) {
-			System.out.println(results.getText());
-			if (data.equalsIgnoreCase(results.getText())) {
-				System.out.println("the entered data did  match");
-			} else {
-				System.out.println("the entered data did not match");
-			}
+		try {
+			options = driver.findElements(By.xpath(
+					"//ul[@class='trigger-list-group col-lg-12 col-md-12 col-sm-12']//li/descendant::div[@placeholder='Add triggers']"));
+		} catch (Exception e) {
+			System.out.println("there are no search results for the entered data");
 		}
+		
+		for(WebElement result:options)
+		{
+			System.out.println(result.getText());
+			if (data.equalsIgnoreCase(result.getText())) {
+				System.out.println("the entered data did  match");
+			} 
+		}
+		
 		driver.quit();
 	}
 }
