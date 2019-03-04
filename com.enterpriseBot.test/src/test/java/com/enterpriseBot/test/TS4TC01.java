@@ -1,6 +1,7 @@
 package com.enterpriseBot.test;
 
 import java.awt.Container;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
@@ -24,7 +25,7 @@ public class TS4TC01 {
 		driver.findElement(By.xpath("//input[@name='usr']")).sendKeys("suraj+tester@enterprisebot.org");
 		driver.findElement(By.xpath("//input[@name='pwd']")).sendKeys("E13_Tester");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		WebElement searchBar = driver.findElement(By.xpath("//*[@id=\"search-form\"]"));
 		searchBar.sendKeys("best");
 		searchBar.sendKeys(Keys.ENTER);
@@ -34,30 +35,27 @@ public class TS4TC01 {
 		clicksearchvalue.click();
 		Thread.sleep(5000);
 
-		String data = "prasanna kumar money5";
+		String data = "prasanna kumar money35";
 		WebElement AddTrigger = driver.findElement(By.xpath("//input[@placeholder='Add triggers']"));
 		AddTrigger.sendKeys(data);
 		AddTrigger.sendKeys(Keys.ENTER);
 		WebElement SAVE = driver
 				.findElement(By.xpath("//button[@class='btn btn-success agent-save-button'][@id='intent-save-btn']"));
-		//jse.executeScript("arguments[0].click();", SAVE);
 		SAVE.click();
-		// driver.switchTo().alert().dismiss();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//input[@placeholder='Search triggers...']")).sendKeys("prasanna kumar money5");
-		String options = driver.findElement(By.xpath("//*[@id=\"trigger-section\"]/div[2]/div[2]/ul/li[1]/div/div"))
-				.getText();
-		WebElement searchTrigger = driver
-				.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div[2]/button[2]"));
-		searchTrigger.sendKeys("prasanna kumar money5");
-		searchTrigger.sendKeys(Keys.ENTER);
-		driver.findElement(By.xpath("//div[@class='button']/button[1]")).click();
-		if (data.equalsIgnoreCase(options)) {
-			System.out.println("the entered data did  match");
-		} else {
-			System.out.println("the entered data did not match");
-		}
 
-		// driver.quit();
+		driver.findElement(By.xpath("//input[@placeholder='Search triggers...']")).sendKeys("prasanna kumar money35");
+		List<WebElement> options = driver.findElements(By.xpath(
+				"//ul[@class='trigger-list-group col-lg-12 col-md-12 col-sm-12']//li/descendant::div[@placeholder='Add triggers']"));
+		Thread.sleep(3000);
+		for (WebElement results : options) {
+			System.out.println(results.getText());
+			if (data.equalsIgnoreCase(results.getText())) {
+				System.out.println("the entered data did  match");
+			} else {
+				System.out.println("the entered data did not match");
+			}
+		}
+		driver.quit();
 	}
 }
