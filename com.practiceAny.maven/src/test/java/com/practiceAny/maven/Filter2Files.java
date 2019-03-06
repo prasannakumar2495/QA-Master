@@ -48,7 +48,7 @@ public class Filter2Files {
 	@Test(priority = 0)
 	public void eachFile() throws Exception {
 		// adding the path of the properties files
-		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\Properties\\property2.properties");
+		fis = new FileInputStream("/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven/Properties/property2.properties");
 		prop.load(fis);
 
 		// number of files to be run.
