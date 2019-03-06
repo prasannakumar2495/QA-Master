@@ -40,17 +40,23 @@ public class Filter2Files {
 
 	// collection of all the data from the required rows while reading the files.
 	LinkedList<String> allreqdata = new LinkedList<String>();
-	
+
 	// collection of all the data from the required rows while reading the files.
-		LinkedList<String> allreqdatafile1 = new LinkedList<String>();
-		
-		// collection of all the data from the required rows while reading the files.
-		LinkedList<String> allreqdatafile2 = new LinkedList<String>();
+	LinkedList<String> allreqdatafile1 = new LinkedList<String>();
+
+	// collection of all the data from the required rows while reading the files.
+	LinkedList<String> allreqdatafile2 = new LinkedList<String>();
+
+	// compare sheet
+	XSSFRow cmprow;
+	int cmplstclmn;
+	int cmplstrow;
+	int cmpfrstrow;
 
 	@Test(priority = 0)
 	public void eachFile() throws Exception {
 		// adding the path of the properties files
-		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\property2.properties");
+		fis = new FileInputStream("D:\\GIT\\QA-Master\\com.practiceAny.maven\\Properties\\property2.properties");
 		prop.load(fis);
 
 		// number of the filters to be applied for
@@ -66,9 +72,7 @@ public class Filter2Files {
 				sampleFile = new FileInputStream(prop.getProperty("inputfile1"));
 				readFile();
 				allreqdatafile1.addAll(allreqdata);
-				System.out.println("the data in the file: " + prop.getProperty("inputfile1") + " is " + allreqdatafile1);
-				//writeFile();
-				//System.out.println("the data is being written into the sheet 1");
+				System.out.println("the data in the file: " + " is " + allreqdatafile1);
 				allreqdata.clear();
 			} else if (g == 2) {
 				System.out.println("entered into the loop equal to 2");
@@ -76,7 +80,9 @@ public class Filter2Files {
 				sampleFile = new FileInputStream(prop.getProperty("inputfile2"));
 				readFile();
 				allreqdatafile2.addAll(allreqdata);
-				System.out.println("the data in the file: " + prop.getProperty("inputfile2") + " is " + allreqdatafile2);
+				System.out.println("the data in the file: " + " is " + allreqdatafile2);
+				System.out.println("the size of the data from the file number 2 is: "+allreqdatafile2.size());
+				System.out.println("the data in the cell is: "+ allreqdatafile2.get(1));
 				writeFile();
 				System.out.println("the data is being written into the sheet 2");
 				allreqdata.clear();
@@ -129,25 +135,46 @@ public class Filter2Files {
 	public void writeFile() throws Exception {
 		XSSFWorkbook opwb = new XSSFWorkbook();
 		XSSFSheet opsheet = opwb.createSheet("Data to be compared");
-		for(int w=0;w<=sizeOfFilter;w++)
-		{	int numrow=0;
+		for (int w = 0; w <= sizeOfFilter; w++) {
+			int numrow = 0;
 			for (String value1 : allreqdatafile1) {
 				numrow++;
-				for(String value2:allreqdatafile2)
-				{
-					oprow = opsheet.createRow(numrow);
-					newcell = oprow.createCell(0);
-					newcell.setCellValue(value1);
-					newcell = oprow.createCell(1);
-					newcell.setCellValue(value2);
-				}
+				oprow = opsheet.createRow(numrow);
+				newcell = oprow.createCell(0);
+				newcell.setCellValue(value1);
+			}
+			for (int i = 1; i <= sizeOfFilter + 1; i++) {
+				newcell = opsheet.getRow(i).createCell(1);
+				newcell.setCellValue(allreqdatafile2.get(i-1));
 			}
 		}
-		fos = new FileOutputStream(new File(prop.getProperty("comparedFile")));
+		fos = new FileOutputStream(prop.getProperty("comparedFile"));
 		opwb.write(fos);
 		fos.flush();
 		fos.close();
 		System.out.println("createworkbook.xlsx written successfully");
 
+	}
+
+	@Test(priority = 1, invocationCount = 0)
+	public void compareColumns() throws IOException {
+		FileInputStream fiscmp = new FileInputStream(prop.getProperty("comparedFile"));
+		XSSFWorkbook cmpwb = new XSSFWorkbook(fiscmp);
+		XSSFSheet cmpsheet = cmpwb.getSheet("Data to be compared");
+		cmprow = null;
+		cmprow = cmpsheet.getRow(1);
+		cmplstclmn = cmprow.getLastCellNum();
+		System.out.println("the last column is: " + cmplstclmn);
+		cmplstrow = cmpsheet.getLastRowNum();
+		System.out.println("the last row is: " + cmplstrow);
+		cmpfrstrow = cmpsheet.getFirstRowNum();
+		for (int i = 0; i <= cmplstrow; i++) {
+			String cmpfrstcellvalue = cmpsheet.getRow(i).getCell(0).getStringCellValue();
+			String cmpscndcellvalue = cmpsheet.getRow(i).getCell(1).getStringCellValue();
+			if (cmpfrstcellvalue.equalsIgnoreCase(cmpscndcellvalue)) {
+				System.out.println(cmpfrstcellvalue + " is equal to: " + cmpscndcellvalue);
+			}
+		}
+		fiscmp.close();
 	}
 }
