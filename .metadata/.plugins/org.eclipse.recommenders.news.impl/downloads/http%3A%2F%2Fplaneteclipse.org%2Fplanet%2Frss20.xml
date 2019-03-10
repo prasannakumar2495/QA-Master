@@ -8,10 +8,129 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Eclipse Announcements: Eclipse Foundation Specification Process Step-by-Step</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/CIFO137l5as/eclipse-foundation-specification-process-step-step</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/CIFO137l5as/eclipse-foundation-specification-process-step-step</link>
+	<description>The Eclipse Foundation Specification Process (EFSP) provides a framework and governance model for developers engaged in the process of developing specifications.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/CIFO137l5as&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Fri, 08 Mar 2019 18:30:00 +0000</pubDate>
+</item>
+<item>
+	<title>Wayne Beaton: Eclipse Foundation Specification Process Step-by-Step</title>
+	<guid isPermaLink="false">http://waynebeaton.wordpress.com/?p=5516</guid>
+	<link>https://waynebeaton.wordpress.com/2019/03/08/eclipse-foundation-specification-process-step-by-step/</link>
+	<description>&lt;p&gt;&lt;em&gt;Scientific progress goes “boink”? – Hobbes&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.eclipse.org/projects/efsp/&quot;&gt;Eclipse Foundation Specification Process&lt;/a&gt; (EFSP) provides a framework and governance model for developers engaged in the process of developing specifications.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Specification&lt;/b&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;: A specification is a collection of related artifacts.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step1.png&quot; class=&quot;alignnone size-full wp-image-5541&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step1.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The EFSP defines a specification as a “collection of Application Programming Interface (API) definitions, descriptions of semantic behavior, data formats, protocols, and/or other referenced specifications, along with its TCK, intended to enable the development and testing of independent Compatible Implementations.” A specification project is, then, an Eclipse open source project concerned with the creation and maintenance of one or more specifications.&lt;/p&gt;
+&lt;p&gt;As a matter of practice, we tend to have a one-to-one mapping between specification projects and specifications. But there are examples of specification projects that play host to multiple specifications. The &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j.jakartaee-stable&quot;&gt;Eclipse Project for Stable Jakarta EE APIs&lt;/a&gt;, for example, is the host project for a handful of specifications that are considered stable and in long term maintenance (and not expected to continue to evolve).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Specification Project&lt;/strong&gt;: A specification project is the composition of a team of committers dedicated to the creation and maintenance of one or more specifications, along with the resources required to create those specifications.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step.png&quot; class=&quot;alignnone size-full wp-image-5521&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-4.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Resources assigned to a specification project include one or more software repositories that serve as the collaboration point for the development of specification documents and corresponding technical artifacts. A specification project has other resources assigned to it, including space on a download server, build resources, and mailing lists.&lt;/p&gt;
+&lt;p&gt;A specification project may also be responsible for other related functionality, including TCKs. It’s considered a best practice to keep implementations of a specification separate from the specification itself, but there is no rule that prevents this sort of coupling.&lt;/p&gt;
+&lt;p&gt;A specification project has one or more project leads who are typically also committers. Project leads have no special powers or authority with regard to development and delivery of specifications. Rather, they are the primary liaison between the project team and the Eclipse Foundation, and form the first link in the leadership chain which includes the Project Management Committee (PMC) and Eclipse Management Organization (EMO). Primarily, project leads are responsible for ensuring that the project team (i.e. the committers) are following the rules.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Specification Versions&lt;/strong&gt;: A specification project produces versions of a specification, which the EFSP refers to as specification versions. Once ratified, a specification version becomes a final specification.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (1).png&quot; class=&quot;alignnone size-full wp-image-5522&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-1-1.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The differences between a specification version and a final specification are subtle. A specification version is the output from the open source project. While a final build of a specification version can be said to be complete, it cannot be used as the basis for an implementation. The intellectual property rights that are required to implement a specification flow through the final specification (a bit more on this later).&lt;/p&gt;
+&lt;p&gt;No specific packaging or means of distribution are prescribed by the EFSP, but one can think of a final specification as a complete package that combines a read-only version of the specification document, technical artifacts (e.g. APIs), a TCK, and one or more compatible implementations. Again, the EFSP makes no specific requirements regarding how everything is packaged, so, for example, the TCK and compatible implementations may manifest as pointers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Specification Project Persists&lt;/strong&gt;: A specification project is formed around the idea of producing and maintaining a specification in the general sense. The same specification project will produce multiple versions of a specification. After the final and complete version of a specification is released, the project team will begin the development cycle for the next release.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (2).png&quot; class=&quot;alignnone size-full wp-image-5523&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-2-1.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Members of the team (i.e. the committers and project Leads) may come and go, but the team remains.&lt;/p&gt;
+&lt;p&gt;A specification project has a well-defined scope that defines the boundaries of their activity. All versions of specifications produced by the project must fall within the scope.&lt;/p&gt;
+&lt;p&gt;The EFSP does not prescribe how resources associated with specification projects are structured, beyond a requirement that the specification project must be the home for the specification document. For technologies like Java® that have technical artifacts (e.g. interfaces) it is convenient, but not necessary to have the source for those technical artifacts maintained as part of the project.&lt;/p&gt;
+&lt;p&gt;Strictly speaking, a specification project can also be the home for a TCK and compatible implementation. As mentioned earlier, it is considered a best practice to keep compatible implementations separate (it may even be considered a bad practice to couple an implementation with the specification).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Project Management Committee&lt;/strong&gt;: Top-level projects are managed by a Project Management Committee (PMC). A PMC has one or more PMC leads and zero or more PMC members. Together the PMC provides oversight and overall leadership for the projects that fall under their top-level project.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (3).png&quot; class=&quot;alignnone size-full wp-image-5538&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-3-1.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Under the &lt;a href=&quot;https://www.eclipse.org/projects/dev_process&quot;&gt;Eclipse Development Process&lt;/a&gt; (EDP) open source projects are organized hierarchically. A special type of project, top-level Projects, sit at the top of the hierarchy. Every top-level project contains one or more projects (which are sometime referred to as “subprojects”). As a general rule, top-level projects are primarily an organizational construct, and all real work occurs in subprojects.&lt;/p&gt;
+&lt;p&gt;Every top-level project has a PMC that supervises the projects under their purview to ensure that they are all working under the rules defined by the EDP, EFSP, and the Eclipse Foundation’s &lt;a href=&quot;https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf&quot;&gt;Intellectual Property Policy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Specification Committee&lt;/strong&gt;: A committee of a working group established to manage the EFSP for technologies within the scope of its working group.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step.png&quot; class=&quot;alignnone size-full wp-image-5539&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-6.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Open source projects are the means by which developers collaborate at the Eclipse Foundation. working groups are a means for companies to work together. The Jakarta EE Working Group, for example, brings companies together to collaborate on marketing, ecosystem development, governance, and (of course) open source software and specification development. As part of their governance activities, a working group must establish a specification committee to define and manage a specification process on behalf of the working group.&lt;/p&gt;
+&lt;p&gt;The specification committee is responsible for ensuring that that the specification teams keep within their defined scope, and generally ensure that the specification versions created by the specification project are implementable and serve the purposes of the working group.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Overview of the Process&lt;/strong&gt;: the EFSP extends the EDP by adding a few extra checks and balances.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (5).png&quot; class=&quot;alignnone size-full wp-image-5524&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-5.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Each iteration through the development cycle starts with a plan. For the first iteration, the project proposal serves as the plan and the creation review as the approval.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Specification Project Proposal&lt;/strong&gt;: Specification projects start with a proposal.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (7).png&quot; class=&quot;alignnone size-full wp-image-5525&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-7.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;A project proposal describes the specification project that will be created. Proposals set out the scope and provide a description of the project and the specifications that the project will produce.&lt;/p&gt;
+&lt;p&gt;The Eclipse Foundation has a web form for defining project proposals. While a proposal is being drafted, the author and anybody designated as a project lead is able to edit the document. Everybody listed as an initial member of the specification team (i.e. committers) are able to view the document. The proposal becomes publicly accessible after it is opened for community review.&lt;/p&gt;
+&lt;p&gt;According to the EDP, the proposal must be open for community review for a minimum of two weeks to provide the community and key stakeholders to provide feedback and improve the proposal. The proposal can be modified during the community review period.&lt;/p&gt;
+&lt;p&gt;While open for community review, the EMO will investigate and approve trademarks associated with the project, which Eclipse Foundation holds on behalf of the project team and community. During this period the EMO will also work to get approval of other exceptions. This includes specification project licensing schemes that fall outside of the pre-approved licensing schemes for the top-level project.&lt;/p&gt;
+&lt;p&gt;When everything is in place (trademarks, licensing approval when required, identification of a mentor, and the minimum two week community review), the EMO will schedule a creation review.&lt;/p&gt;
+&lt;p&gt;Creation reviews run for a minimum of one week. The EMO schedules two review periods each month. Reviews are grouped together; they are scheduled according to their end dates which occur on the first and third Wednesdays of every month.&lt;/p&gt;
+&lt;p&gt;The proposal is locked down during the creation review period and no changes are possible. The creation review period is the last opportunity for the community and stakeholders to provide feedback. The specification committee and the membership-at-large of the Eclipse Foundation can intervene with the creation process. The membership can, should they find cause, request that the EMO fail a creation review and require that the proposal author either make additional changes and restart the review process, or withdraw the proposal completely (for what it’s worth, this has never happened).&lt;/p&gt;
+&lt;p&gt;Upon successful completion of the creation review, the Eclipse Foundation will engage in a provisioning process to turn the proposal into a live specification project. Provisioning starts with the authorization of committers which is initiated via email requests to all committers listed on the proposal to engage in our paperwork process. The provisioning process is kept on hold until the Eclipse Foundation’s records team has the necessary paperwork from at least one committer.&lt;/p&gt;
+&lt;p&gt;The proposal document serves as the plan for the first development iteration. Subsequent iterations through the process rely on the creation of a release plan and plan review.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Release Planning&lt;/strong&gt;: The project team assembles the plan for each release cycle.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (8).png&quot; class=&quot;alignnone size-full wp-image-5526&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-8.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Again, note that the proposal and creation review serve as the plan and plan review for the first release.&lt;/p&gt;
+&lt;p&gt;The plan must be in-scope (i.e. all new work must fall within the bounds defined by the specification project’s scope) and must be developed in consideration of the concerns of stakeholders. It must, for example, take into consideration overarching plans of the PMC or associated working group. It’s worth noting that the concerns of the project team must also be taken into consideration when creating an overarching plan. We’re all in this together.&lt;/p&gt;
+&lt;p&gt;The plan is delivered to the specification committee via a plan review. The specification committee must vote to approve: a two-thirds majority of positive votes are required to succeed. How the individual members of the specification committee decide to vote varies; but at a minimum, by voting yes, members affirm that they believe that the planned work fits within the project’s scope and that sufficient consultation with the community and stakeholders has occurred.&lt;/p&gt;
+&lt;p&gt;All reviews, including plan reviews, run for a minimum of one week. They start with the delivery of review materials, and end with the conclusion of the voting period. For a plan review, materials include the plan itself along with a concise description (executive summary) of the plan. For progress and release reviews (which will be discussed shortly), the review materials include a milestone or release candidate build of the project content.&lt;/p&gt;
+&lt;p&gt;All reviews are run in the open. In addition to the approvals that are required, reviews offer an opportunity for the community and adopters to make their concerns known. As the entire process is run in the open, reviews should be considered as a final opportunity to express concern: parties who have a stake or interest in a specification process should engage early and often via project-specific open channels.&lt;/p&gt;
+&lt;p&gt;In the event that a review fails, the project team must regroup, incorporate feedback, and re-engage in a new review. The EFSP makes no requirement regarding the timing of re-engagement.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Committers Develop Specifications&lt;/strong&gt;: Committers have the power and responsibility to push content into the specification project’s Git repositories. Committers hold most of the power and responsibility in the process.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (9).png&quot; class=&quot;alignnone size-full wp-image-5527&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-9.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Committer power must be used wisely. Committers have awesome power, but they also have awesome responsibility and are expected to work to the benefit of the community and ecosystem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Committers Accept Contributions&lt;/strong&gt;: Committers accept contributions from non-committers. In the GitHub world, this takes the form of committers reviewing and accepting pull requests.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (10).png&quot; class=&quot;alignnone size-full wp-image-5529&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-10.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Committers are responsible to ensure that the accepted content is within scope and release plan, and that the Eclipse Foundation’s Intellectual Property Policy is observed and the &lt;a href=&quot;https://www.eclipse.org/projects/handbook/#ip&quot;&gt;IP Due Diligence Process&lt;/a&gt; is followed.&lt;/p&gt;
+&lt;p&gt;Contributors must sign the &lt;a href=&quot;https://www.eclipse.org/legal/ECA.php&quot;&gt;Eclipse Contributor Agreement&lt;/a&gt; (ECA).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Technology Compatibility Kit (TCK)&lt;/strong&gt;: While the specification project committers are developing the specification resources, TCK project committers and contributors assemble the TCK.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (11).png&quot; class=&quot;alignnone size-full wp-image-5531&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-11-1.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The EFSP does not make any requirements regarding where the TCK lives. It may be a part of the corresponding specification project, or it may be separate.&lt;/p&gt;
+&lt;p&gt;When separate, a TCK project is a traditional Eclipse open source software project. Committers and contributors work on a Eclipse open source software project in much the same way they do on a specification project: committers can push directly to the project’s Git repositories, and must review and accept contributions from non-committer contributors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Produce Milestone Builds&lt;/strong&gt;: The project team will produce milestone builds.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (12).png&quot; class=&quot;alignnone size-full wp-image-5530&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-12.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;A milestone build is a pre-release build of a version of the specification (“Specification Version”). Milestone builds are intended for a use only by a limited audience (generally the project team themselves, committers working on candidate compatible implementations, and other early adopters).&lt;/p&gt;
+&lt;p&gt;All efforts should be undertaken to ensure that a milestone build is technically correct, though it may be incomplete. A compatible implementation cannot be based on a milestone build of a Specification.&lt;/p&gt;
+&lt;p&gt;Later builds may be labeled as “release candidates”. For the purposes of the EFSP and EDP, the terms “release candidate” and “milestone’ are different only in intent.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Progress Review&lt;/strong&gt;: The specification project team must engage in at least one progress review during their release cycle.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (13).png&quot; class=&quot;alignnone size-full wp-image-5532&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-13.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Progress reviews are a notion that is inherited from the EDP. The intent of a progress review is to ensure that the work is in-scope; that a project is making progress towards a release that will be approved; and that the EDP, EFSP, and Eclipse Foundation Intellectual Property Policy are being followed.&lt;/p&gt;
+&lt;p&gt;The project’s record of intellectual property contributions (&lt;a href=&quot;https://www.eclipse.org/projects/handbook/#ip-iplog&quot;&gt;IP Log&lt;/a&gt;) must be submitted to the EMO for review and approval before engaging in the review. Supporting materials for a review, including a concise description (executive summary) of the progress made to-date and a milestone build of the project content must be submitted before the start of the one week (minimum) review period. The progress review must be approved by simple +1 from a PMC representative, and by positive two-thirds super-majority vote of the specification committee.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Implementing the Specification&lt;/b&gt;: While the specification project’s committers work on the specification content, other teams may work on implementing them.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (14).png&quot; class=&quot;alignnone size-full wp-image-5533&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-14.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;An implementation cannot be referred to as a compatible implementation until after the particular version of the specification is ratified and declared a final specification (and—of course—fulfills all of the requirements of the TCK associated with the final specification).&lt;/p&gt;
+&lt;p&gt;The EFSP makes no requirement regarding timing. In a code-first world, the implementation may exist before the specification. In this hypothetical case, an implementation project’s team would instead make refinements to their implementation based on the work-in-progress. It’s expected that implementation teams will interact regularly (via open channels) with the specification project’s team to provide feedback and ask questions.&lt;/p&gt;
+&lt;p&gt;In order to be declared final, a specification needs to have at least one compatible implementation that implements all aspects of the specification (including any optional parts) and released under one of the open source licenses listed in the EFSP (more below).&lt;/p&gt;
+&lt;p&gt;This introduces a bit of a “chicken and egg” problem: we can’t have a final specification without a compatible implementation and we can’t have a compatible implementation without a final specification. The specification project, TCK project, and implementation teams need to work together so that at least one implementation will be available and complete in time to be officially released and declared a compatible implementation at the time the final specification is ratified.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Release Review&lt;/strong&gt;: The specification project team must engage in a release review at the end of their release cycle.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (15).png&quot; class=&quot;alignnone size-full wp-image-5534&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-15.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;At least one compatible implementation must be distributed under one of the open source licenses specified by the EFSP: EPL-2.0, EDL-1.0 (BSD-3-Clause), Apache-2.0.&lt;/p&gt;
+&lt;p&gt;As is required for a progress review, the project’s record of intellectual property contributions (&lt;a href=&quot;https://www.eclipse.org/projects/handbook/#ip-iplog&quot;&gt;IP Log&lt;/a&gt;) must be submitted to the EMO for review and approval before engaging in the release review, the review must be approved by simple +1 from a PMC representative, and by positive two-thirds super-majority vote of the specification committee.&lt;/p&gt;
+&lt;p&gt;Following a successful release review the specification version &lt;span title=&quot;boink&quot;&gt;transmogrifies&lt;/span&gt; into a final specification.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Final Specification&lt;/strong&gt;: With the successful completion of a release review, including approval of the specification committee by a super-majority vote, a specification version is considered ratified and the associated artifacts are promoted and distributed by the specification committee as a final specification.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (16).png&quot; class=&quot;alignnone size-full wp-image-5535&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-16.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;All versions of specifications that are referenced by a ratified final specification must themselves be ratified. The release review for related specification versions may be run concurrently.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Final Specification Licenses&lt;/strong&gt;: Final Specifications and their associated artifacts are distributed under specific licenses.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (17).png&quot; class=&quot;alignnone size-full wp-image-5536&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-17.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The Specification Document for the Final Specification must be distributed as read-only text under the &lt;a href=&quot;https://www.eclipse.org/legal/efsl.php&quot;&gt;Eclipse Foundation Specification License&lt;/a&gt;. The Ratified TCK in composite is distributed under the &lt;a href=&quot;https://www.eclipse.org/legal/tck.php&quot;&gt;Eclipse Foundation TCK License&lt;/a&gt;. Other technical artifacts must be distributed under an open source license (normally the specification project’s license).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Compatible Implementations&lt;/strong&gt;: Implementations may only claim compatibility with a final specification.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;EFSP Step-by-step (18).png&quot; class=&quot;alignnone size-full wp-image-5537&quot; src=&quot;https://waynebeaton.files.wordpress.com/2019/03/efsp-step-by-step-18.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;As discussed earlier, there must exist at least one compatible implementation of a specification version under one of the designated open source licenses before it can be ratified as a final specification. Other compatible implementations may be created from the final specification and distributed under other licensing terms (as determined by respective vendors).&lt;/p&gt;
+&lt;p&gt;The intellectual property rights required to build a compatible implementation flow from the final specification. That is, in order to be considered a compatible implementation and benefit from the intellectual property protections provided by the Eclipse Foundation Specification Agreement, an implementation must be based on a final specification. No claims regarding compatibility may be made for an implementation milestone build or unratified specification version.&lt;/p&gt;</description>
+	<pubDate>Fri, 08 Mar 2019 13:52:51 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Eclipse Foundation Board Election Results</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/AGnSilbZADg/20190305-boardelection.php</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/AGnSilbZADg/20190305-boardelection.php</link>
+	<description>See the results of the Eclipse Foundation Sustaining Member and Committer Member elections for representatives to our Board of Directors.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/AGnSilbZADg&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Wed, 06 Mar 2019 15:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: The 2019 Jakarta EE Developer Survey is underway!</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/JQv1iSBVyC8/2019-jakarta-ee-developer-survey-underway</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/JQv1iSBVyC8/2019-jakarta-ee-developer-survey-underway</link>
+	<description>The Jakarta EE Working Group is launching the Jakarta EE Developer Survey for 2019!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/JQv1iSBVyC8&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Tue, 05 Mar 2019 15:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>Eclipse Announcements: Jakarta EE - What's New in 2019?</title>
 	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/E90K3ynkcSw/</guid>
 	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/E90K3ynkcSw/</link>
-	<description>Check out what's new in 2019 for Jakarta EE!.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/E90K3ynkcSw&quot; width=&quot;1&quot; /&gt;</description>
+	<description>Check out what's new in 2019 for Jakarta EE!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/E90K3ynkcSw&quot; width=&quot;1&quot; /&gt;</description>
 	<pubDate>Mon, 04 Mar 2019 13:00:00 +0000</pubDate>
 </item>
 <item>
@@ -365,106 +484,6 @@ October 22 - 24: Conference
 	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/PQGqQX0ryoE/participate-2019-iot-developer-survey</link>
 	<description>The Eclipse IoT Working Group is pleased to launch the 2019 IoT Developer Survey and we want to hear from you!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/PQGqQX0ryoE&quot; width=&quot;1&quot; /&gt;</description>
 	<pubDate>Mon, 11 Feb 2019 15:10:00 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Announcements: Eclipse Newsletter - Editorial Calendar 2019</title>
-	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/1RRW9PiTAHE/eclipse-newsletter-%E2%80%94-editorial-calendar-2019</guid>
-	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/1RRW9PiTAHE/eclipse-newsletter-%E2%80%94-editorial-calendar-2019</link>
-	<description>Our goal with the newsletter is to deliver great content that educates, motivates, and inspires our community!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/1RRW9PiTAHE&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Mon, 11 Feb 2019 15:10:00 +0000</pubDate>
-</item>
-<item>
-	<title>Thabang Mashologu: Participate in the 2019 IoT Developer Survey!</title>
-	<guid isPermaLink="false">https://blogs.eclipse.org/6670 at https://blogs.eclipse.org</guid>
-	<link>https://blogs.eclipse.org/post/thabang-mashologu/participate-2019-iot-developer-survey</link>
-	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;The &lt;a href=&quot;http://iot.eclipse.org/&quot;&gt;Eclipse IoT&lt;/a&gt; Working Group is pleased to launch the &lt;a href=&quot;https://www.surveymonkey.com/r/IoThabang&quot;&gt;2019 IoT Developer Survey&lt;/a&gt;. If you are involved in developing Internet of Things solutions and services, we want to hear from you!&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;The purpose of the survey is to gain a better understanding of the requirements, priorities, and perceptions of IoT developer communities. This time around, responses will be collected until March 8, 2019, and the results will be published in early April.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Now in its fifth year, the survey has proven to be an influential assessment of the IoT market as viewed from the development front lines. The results from recent years (&lt;a href=&quot;https://www.slideshare.net/Eclipse-IoT/iot-developer-survey-2018-130998751&quot;&gt;2018&lt;/a&gt;, &lt;a href=&quot;https://www.slideshare.net/Eclipse-IoT/iot-developer-survey-2017-130998641&quot;&gt;2017&lt;/a&gt;, and &lt;a href=&quot;https://www.slideshare.net/Eclipse-IoT/iot-developer-survey-2016-report&quot;&gt;2016&lt;/a&gt;) have provided interesting insights into the key opportunities and challenges for developers building IoT solutions.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Please take the time to complete this short survey! Thank you in advance for your participation!&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;→ &lt;a href=&quot;https://www.surveymonkey.com/r/IoThabang&quot;&gt;Take the survey now&lt;/a&gt; ←&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;a href=&quot;https://blogs.eclipse.org/www.surveymonkey.com/r/IoThabang&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/kxgBf1fz6GC262mTk6k2bGkEIq-jf2mK7JtQ38laXJEdFEGmI6TUs63H0xHPIXI26aJovbQsHbXDFTWOtUbQgUL9OagVSI8kDyn0WxYfAelYxOLYCGkJOM20xfUZNSyMKw4LvMj8&quot; style=&quot;height: 312px; width: 624px;&quot; /&gt;&lt;/a&gt; &lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/eclipse-iot&quot;&gt;eclipse-iot&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/iot&quot;&gt;IoT&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/iot-developer-survey-2019&quot;&gt;iot-developer-survey-2019&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/community&quot;&gt;Community&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-	<pubDate>Mon, 11 Feb 2019 10:48:22 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Announcements: Open Source: Can you afford not to get involved?</title>
-	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/a_D3H4Cw-dM/open-source-can-you-afford-not-get-involved</guid>
-	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/a_D3H4Cw-dM/open-source-can-you-afford-not-get-involved</link>
-	<description>To say that the open source community is on a roll would be an understatement.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/a_D3H4Cw-dM&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Thu, 07 Feb 2019 13:30:00 +0000</pubDate>
-</item>
-<item>
-	<title>Thabang Mashologu: Open Source: Can you afford not to get involved?</title>
-	<guid isPermaLink="false">https://blogs.eclipse.org/6668 at https://blogs.eclipse.org</guid>
-	<link>https://blogs.eclipse.org/post/thabang-mashologu/open-source-can-you-afford-not-get-involved</link>
-	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Recently, the streaming data analytics startup Confluent announced that it had closed a $125 million Series D funding round. With the company’s value pegged at $2.5 billion, Confluent became the latest open source “unicorn.”&lt;/p&gt;
-
-&lt;p&gt;To say that the open source community is on a roll would be an understatement.&lt;/p&gt;
-
-&lt;p&gt;In 2018, &lt;a href=&quot;https://medium.com/memory-leak/2018-the-biggest-year-for-open-source-software-ever-part-deux-8d1b33fe47e4&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;open source M&amp;amp;A activity&lt;/a&gt; totaled an unprecedented $47 billion. IBM’s purchase of Red Hat, valued at a whopping $35 billion, went down as the largest software acquisition deal in history. While the IBM-Red Hat deal garnered most of the attention, some of the other acquisitions in the open source space were no less significant in terms of their deal sizes, and more importantly, the players involved.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(Disclosure: Both IBM and Red Hat are strategic members of the &lt;/em&gt;&lt;em&gt;&lt;a href=&quot;https://www.eclipse.org/membership/exploreMembership.php&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;Eclipse Foundation&lt;/a&gt; &lt;/em&gt;&lt;em&gt;where I work.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Beyond catalyzing new venture creation and growth, open source is at the heart of the digital economy. IBM, Adobe, Salesforce, and VMware are not companies that you instantly recognize as being in the open source business. The fact that some of the heavyweights in the closed source software business are now among the most active participants in open source should be an eye-opener for companies contemplating a foray into the world of collaborative software development.&lt;/p&gt;
-
-&lt;p&gt;While open source may seem like an overnight success, the role that open source communities and projects play towards the success of household names such as Google, Netflix, Facebook, Lyft, GE, Walmart, and others is less known. According to the &lt;a href=&quot;https://github.com/todogroup/survey&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;TODO Group&lt;/a&gt;, 55 percent of companies are shipping commercial products based on open source. The same survey found that 72 percent of companies use open source for non-commercial or internal reasons.&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Why is open source radically changing the software industry?&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;As it turns out, some old-fashioned rationale is at play: organizations are realizing that the benefits of open source vastly outweigh the costs and risks. For a software development model that has been around for twenty years, the benefits that open source delivers and the foundational aspects of its ecosystem are still unclear to many business leaders.&lt;/p&gt;
-
-&lt;p&gt;While the term “digital transformation” may have &lt;a href=&quot;https://en.wikipedia.org/wiki/Jumping_the_shark&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;jumped the shark&lt;/a&gt;, it’s undeniable that in the era of the digital economy, all companies are becoming technology businesses. Companies, irrespective of size, are putting customers at the center of everything they do and leveraging technology to deliver services in new and innovative ways. Case studies where cutting-edge technology helped startups upend traditional businesses are aplenty.&lt;/p&gt;
-
-&lt;p&gt;What is perhaps less understood by the casual observer is the pivotal role that open source technologies and communities play in fuelling commercial digitization in industry sectors as varied as financial services, automotive, mining, healthcare, and entertainment (think CGI-based blockbusters in movie theatres.)&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Open source and the rise of the “entropeneur”&lt;sup&gt;TM&lt;/sup&gt;&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;A new class of entrepreneurs, or better yet, “entr&lt;strong&gt;open&lt;/strong&gt;eurs” is leveraging open source to drive innovation-based strategies that radically change the way business is done.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://media.licdn.com/dms/image/C4E12AQGJP7-qJG7H8g/article-inline_image-shrink_1500_2232/0?e=1554940800&amp;amp;v=beta&amp;amp;t=gZO4xvV-xnVwRBtni5abJ7T3toKaH8yHWo2xDNAYqT4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Open source allows community members to control their development costs while maintaining the flexibility they desire in their software. While reduced cost, flexibility, reliability, control, and sustainability are the apparent benefits of open source software, the key drivers behind its adoption can be linked to revenue growth and business transformation initiatives underway at companies.&lt;/p&gt;
-
-&lt;p&gt;As companies implement new technologies such as cloud, IoT, and AI, the speedy development and rollout out of interoperable business applications are becoming critical to achieving rapid success at scale.&lt;/p&gt;
-
-&lt;p&gt;Companies born in the cloud, and the ones migrating to it, are looking for newer development methodologies and frameworks that break vendor and platform lock-in. Participating in open source drastically lowers dependencies on vendor release cycles and licensing rules while providing organizations the freedom to effortlessly port applications and workloads from one cloud platform provider to another.&lt;/p&gt;
-
-&lt;p&gt;Open source and multi-cloud portability have evolved as two key enablers of digitalization that allow companies to collaborate and innovate their way to commercial success.&lt;/p&gt;
-
-&lt;p&gt;So, what does it take for an entropeneur to be successful?&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Community focus&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;The community approach towards software development removes single-vendor dependencies while enabling and encouraging members to work collaboratively to build on the learnings of others. More eyes on the code ensure that issues are identified and fixed promptly allowing the maintainers to deliver software code that is bug-free, interoperable, and secure, giving credence to Linus’s Law: &lt;em&gt;Given enough eyeballs, all bugs are shallow.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;For businesses, there is a good reason to encourage employee participation in open source projects. A recent Harvard Business School &lt;a href=&quot;https://hbswk.hbs.edu/item/the-hidden-benefit-of-giving-back-to-open-source-software&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;post&lt;/a&gt; points to studies that indicate that paying employees to contribute to open source boosted their productivity by as much as a hundred percent.&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Paying it forward&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;It is essential to understand the fundamental principles under which an open source ecosystem exists. The primary tenet of open source is: Give and take.&lt;/p&gt;
-
-&lt;p&gt;The fact is, if open source plays a role in your business, giving back — either through upstream contributions or membership in an open source software foundation — is an investment in the quality and sustainability of the projects you rely on.&lt;/p&gt;
-
-&lt;p&gt;However, a 2018 &lt;a href=&quot;https://www.digitalocean.com/currents/october-2018/&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;survey&lt;/a&gt; by Digital Ocean shows that companies may not be putting their money where their mouth is.&lt;/p&gt;
-
-&lt;blockquote&gt;“ &lt;em&gt;Only 18 percent of respondents said their company is a member of an open source-related organization, and 75 percent said their company invests $1k or less every year in donations to open source&lt;/em&gt;.”&lt;/blockquote&gt;
-
-&lt;p&gt;It is a pay-it-forward model that relies on companies giving back to the community. A community implies collaboration that goes beyond the confines of a single company. Open source requires competitors to work collaboratively for the common goal. The larger the community, the better the chances of sustainability of its projects, a critical requirement for any production software.&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Participation is key&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;In an ecosystem that includes developers who volunteer their time to create and maintain software, and the users that take the free software and build products on top of it, there is a delicate balance. For the modestly-staffed foundations that administer the community and oversee the open source projects and its committers, a commercially viable ecosystem is vital to its success.&lt;/p&gt;
-
-&lt;p&gt;The sustainability of open source is predicated on the participation of corporate entities that bring financial stability to its organization and the developers who contribute their time. The foundations, in turn, strive to foster a supportive environment that encourages newcomers to participate, while ensuring the existing members continue to enjoy the experience of building innovative software solutions that become the building blocks of successful companies.&lt;/p&gt;
-
-&lt;p&gt;So, can you afford not to get involved?&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/open-source&quot;&gt;Open Source&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/business&quot;&gt;Business&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/ecosystem&quot;&gt;Ecosystem&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/sustainability&quot;&gt;Sustainability&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/open-collaboration&quot;&gt;Open collaboration&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/open-innovation&quot;&gt;Open innovation&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-	<pubDate>Wed, 06 Feb 2019 20:33:33 +0000</pubDate>
 </item>
 
 </channel>
