@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="JavaSE-9" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
 	<item value="true" key="ProjectSelectionDialog.show_all"/>
-	<item value="/Users/prasannakumaranisetti/Movies/GIT/QA-Master/com.practiceAny.maven" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="/Users/prasannakumaranisetti/Movies/GIT/QA-Master" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
