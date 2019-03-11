@@ -63,10 +63,12 @@ ELSE NULL
 END 
 FROM TABLEOFC100
 
-CREATE PROCEDURE SelectAllCustomers
+CREATE PROCEDURE SelectAllCustomers 
 AS
-SELECT * FROM TABLEOFC100
-GO;
+BEGIN
+	SELECT * 
+	FROM TABLEOFC100
+END
 
 -------------------------------------------------------------------------------------
 
