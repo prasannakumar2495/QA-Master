@@ -1,4 +1,6 @@
 
+import java.io.Closeable;
+import java.io.IOException;
 import java.sql.*;
 import java.util.Scanner;
 
@@ -10,10 +12,10 @@ public class DRIVER {
 
 	private void createTable() {
 		try {
-			cnt = DriverManager.getConnection("jdbc:derby:/Users/prasannakumaranisetti/MyDB;create=true",
+			cnt = (Connection) DriverManager.getConnection("jdbc:derby:/Users/prasannakumaranisetti/MyDB;create=true",
 					"PrasannaKumar", "12345");
 
-			stmt = cnt.createStatement();
+			stmt = ((java.sql.Connection) cnt).createStatement();
 			
 			rslt = stmt.executeQuery("CREATE TABLE TableA/C (\n" + 
 					"    UserName varchar(255),\n" + 
@@ -49,8 +51,8 @@ public class DRIVER {
 					System.out.println(PWD + "--->" + PWDIP);
 				}
 			}
-			cnt.close();
-		} catch (SQLException e) {
+			((Closeable) cnt).close();
+		} catch (SQLException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
