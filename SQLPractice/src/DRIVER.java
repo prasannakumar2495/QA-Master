@@ -4,27 +4,29 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Scanner;
 
-
 public class DRIVER {
 	Connection cnt;
 	Statement stmt;
 	ResultSet rslt;
 
-	private void createTable() {
+	private void createTable() throws ClassNotFoundException {
 		try {
-			cnt = (Connection) DriverManager.getConnection("jdbc:derby:/Users/prasannakumaranisetti/MyDB;create=true",
-					"PrasannaKumar", "12345");
+			//Class.forName("something.jdbc.driver.YourFubarDriver");
+			cnt = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/sys",
+					"root", "2495@Apple");
 
 			stmt = ((java.sql.Connection) cnt).createStatement();
-			
-			rslt = stmt.executeQuery("CREATE TABLE TableA/C (\n" + 
-					"    UserName varchar(255),\n" + 
-					"    PWD varchar(255),\n" + 
-					");");
+			String code = "call SelectAllCustomers";
+			rslt = stmt.executeQuery(code);
+			while(rslt.next())
+			{
+				System.out.println(rslt.getString("name"));
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("done");
 	}
 
 	private void CreateData() {
@@ -58,10 +60,10 @@ public class DRIVER {
 		}
 
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
 		DRIVER d = new DRIVER();
 		d.createTable();
-		d.CreateData();
-		d.validateData();
+		//d.CreateData();
+		//d.validateData();
 	}
 }
