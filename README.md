@@ -1,4 +1,4 @@
 # QA-Master
-Coding Practice (java and python from the basics)
+Coding Practice (java , python and SQL from the basics)
 
-this is an repository that contains both coding in #java and #python from the basics
+this is an repository that contains both coding in #java, #python and #SQL from the basics
