@@ -30,3 +30,4 @@ insert into tableOFC101 (ID_NUM , DEPT, MGR) values
 	FROM TABLEOFC100;
     
     call SelectAllCustomers
+	
