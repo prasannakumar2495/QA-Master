@@ -4,6 +4,25 @@
 <link rel="stylesheet" href="CSS_Sheet.css">
 <meta charset="UTF-8">
 <title>Prasanna Kumar</title>
+<style>
+a: link {
+	color: green;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:visited {
+	color: red;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover {
+	color: purple;
+	background-color: transparent;
+	text-decoration: none;
+}
+</style>
 </head>
 <body>
 	<h1 style="background-color: powderblue;">My First Heading</h1>
@@ -19,8 +38,16 @@
 		My first <br>paragraph.
 	</p>
 	<p title="I'm a tooltip">This is the second heading</p>
-	<a href="http://localhost:8080/PK/UI/PK.html">This is the link</a>
-	<img src="mask.jpg" width="500" height="500" alt="MASK">
+	<br>
+	<a href="#p01">the user can jump to the para with the ID p01</a>
+	<br>
+	<!-- the TARGET can have '_blank,_self,_parent,framename' as values, this can also be used to give the tool tip-->
+
+	<a href="http://localhost:8080/PK/UI/PK.html" target="_blank">This
+		is the link</a>
+	<br>
+	<!-- the 'alt' attribute is used to describe the picture when the picture has not loaded -->
+	<img src="mask.jpg" width="500" height="500" alt="picture of an hacker">
 	<button>This is the button</button>
 	<button disabled>This has to be disabled</button>
 	<ol>
@@ -83,5 +110,33 @@
 		house no:111<br> street: abc<br> city:qweqwe<br> pin
 		code:123<br>
 	</address>
+	<p>
+		<img alt="smily gif" src="smily.gif"
+			style="width: width:100px; height: 100px; float: left;">this is
+		an smiley gif
+	</p>
+	<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400"
+		height="379">
+
+	<map name="workmap">
+		<area shape="rect" coords="34,44,270,350" alt="Computer"
+			href="computer.htm">
+		<area shape="rect" coords="290,172,333,250" alt="Phone"
+			href="phone.htm">
+		<area shape="circle" coords="337,300,44" alt="Cup of coffee"
+			href="coffee.htm">
+	</map>
+
+	<pre style="background-image: url('mask.jpg'); color: white;">
+		prasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
+		kumarprasanna kumarprasanna kumar</pre>
 </body>
 </html>
