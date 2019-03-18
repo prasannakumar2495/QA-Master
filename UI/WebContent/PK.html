@@ -5,6 +5,17 @@
 <meta charset="UTF-8">
 <title>Prasanna Kumar</title>
 <style>
+table, tbody, tr, td, th {
+	border-collapse: collapse;
+	background-color: yellow;
+}
+
+td, tr {
+	padding: 15px;
+	text-align: center;
+	text-shadow: green;
+}
+
 a: link {
 	color: green;
 	background-color: transparent;
@@ -49,7 +60,7 @@ a:hover {
 	<!-- the 'alt' attribute is used to describe the picture when the picture has not loaded -->
 	<img src="mask.jpg" width="500" height="500" alt="picture of an hacker">
 	<button>This is the button</button>
-	<button disabled>This has to be disabled</button>
+	<button disabled style="float: right;">This has to be disabled</button>
 	<ol>
 		<li style="color: red;">Link 1</li>
 		<li style="color: blue;">Link 2</li>
@@ -111,11 +122,12 @@ a:hover {
 		code:123<br>
 	</address>
 	<p>
-		<img alt="WebContent/smily.gif" src="smily.gif"
-			style="width: width:100px; height: 100px; float: left;">this is
-		an smiley gif
+		<img alt="smily gif" src="smily.gif"
+			style="width: width:100px; height: 100px; float: right:;">this
+		is an smiley gif
 	</p>
-	<img src="WebContent/workplace.jpg" alt="Workplace" usemap="#workmap" width="400"
+	<br>
+	<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400"
 		height="379">
 
 	<map name="workmap">
@@ -126,17 +138,67 @@ a:hover {
 		<area shape="circle" coords="337,300,44" alt="Cup of coffee"
 			href="coffee.htm">
 	</map>
+	<br>
+	<!-- images that contain links -->
+	<a href="http://localhost:8080/PK/UI/PK.html"> <img
+		alt="link with image" src="link_image.jpeg"
+		style="width: auto; height: 50px; float: right;">
+	</a>
+	<br>
 
 	<pre style="background-image: url('mask.jpg'); color: white;">
 		prasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
 		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
 		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
-		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
-		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
-		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
-		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
-		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
-		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
-		kumarprasanna kumarprasanna kumar</pre>
+	</pre>
+	<br>
+
+	<table border="2" style="width: 100%;">
+		<caption>
+			<strong><i>This is a practice table</i></strong>
+		</caption>
+		<tbody>
+			<tr>
+				<th>first row</th>
+				<th>second row</th>
+			</tr>
+			<tr>
+				<td>first row</td>
+				<td>second row</td>
+			</tr>
+			<tr>
+				<td>first row</td>
+				<td>second row</td>
+			</tr>
+			<tr>
+				<td>first row</td>
+				<td>second row</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table border="2" style="width: 100%">
+		<caption>second table</caption>
+		<tbody>
+			<tr>
+				<th rowspan="2">2 rows</th>
+				<td>value</td>
+			</tr>
+			<tr>
+				<td>value2</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<ul style="list-style-type: square;">
+		<li>PK</li>
+		<li>PK</li>
+		<li>PK</li>
+		<li>PK</li>
+	</ul>
+	<dl>
+		<dt>PK</dt>
+		<dd>Prasanna Kumar</dd>
+	</dl>
 </body>
 </html>
