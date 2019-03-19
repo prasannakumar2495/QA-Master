@@ -6,11 +6,11 @@ h1 {
 	color: red;
 }
 p {
-	color: white;
-}
-#p01 {
 	color: black;
 }
-#PK:active {
-	color: white;
+#p01 {
+	color: red;
+}
+#PK {
+	color: black;
 }

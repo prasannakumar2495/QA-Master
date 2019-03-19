@@ -5,6 +5,17 @@
 <meta charset="UTF-8">
 <title>Prasanna Kumar</title>
 <style>
+.DIV
+	{
+	background-color: black;
+	color: white;
+}
+
+span.SPAN {
+	background-color: blue;
+	color: white;
+}
+
 table, tbody, tr, td, th {
 	border-collapse: collapse;
 	background-color: yellow;
@@ -35,20 +46,25 @@ a:hover {
 }
 
 li {
-	color: white;
+	color: black;
 	padding: 10px;
 	list-style-type: none;
 }
 
-li:hover{
+li:hover {
 	background-color: aqua;
 }
+
 ul {
 	background-color: black;
 	display: flex;
 }
+
 li a:hover {
 	background-color: yellow;
+}
+#pk100{
+	background-color: aqua;
 }
 </style>
 </head>
@@ -62,6 +78,7 @@ li a:hover {
 	<hr>
 	<h4 style="background-color: rgba(200, 30, 15, 0.5);">this is
 		using the rgb value</h4>
+	<a href="#pk101">this is the link to navigate to the element with the ID value pk101</a>
 	<p style="color: blue;">
 		My first <br>paragraph.
 	</p>
@@ -225,5 +242,45 @@ li a:hover {
 		<dt>PK</dt>
 		<dd>Prasanna Kumar</dd>
 	</dl>
+
+	<div>this is</div>
+	<div>with the DIV tag</div>
+	<!-- the SPAN tag can be used to only manipulate the in-line text but not the complete data -->
+	<span>this is</span>
+	<span>with the SPAN tag</span>
+
+	<div>
+		DIV
+		<ol>
+			<li>testing the DIV tag</li>
+			<li>testing the DIV tag</li>
+		</ol>
+	</div>
+	<div class="DIV">
+		DIV
+		<ol>
+			<li>testing the DIV tag</li>
+			<li>testing the DIV tag</li>
+		</ol>
+	</div>
+	<span class="SPAN">SPAN
+		<ol>
+			<li>testing the SPAN tag</li>
+			<li>testing the SPAN tag</li>
+		</ol>
+	</span>
+	<span>SPAN
+		<ol>
+			<li>testing the SPAN tag</li>
+			<li>testing the SPAN tag</li>
+		</ol>
+	</span>
+	<!-- the difference between CLASS and ID is that diff. elements can have the same CLASS value but not the ID value -->
+	<div id="pk100">
+		<p>prasanna kumar with the ID pk100</p>
+	</div>
+	<div id="pk101">
+		<p>prasanna kumar with the ID pk101</p>
+	</div>
 </body>
 </html>
