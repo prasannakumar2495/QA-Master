@@ -1,13 +1,16 @@
 @charset "UTF-8";
 body {
-	background-color: rgba(255,255,255,0);
+	background-color: inherit;
 }
 h1 {
-	color: rgba(25,0,200);
+	color: red;
 }
 p {
-	color: green;
+	color: white;
 }
 #p01 {
 	color: black;
+}
+#PK:active {
+	color: white;
 }

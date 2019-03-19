@@ -33,10 +33,27 @@ a:hover {
 	background-color: transparent;
 	text-decoration: none;
 }
+
+li {
+	color: white;
+	padding: 10px;
+	list-style-type: none;
+}
+
+li:hover{
+	background-color: aqua;
+}
+ul {
+	background-color: black;
+	display: flex;
+}
+li a:hover {
+	background-color: yellow;
+}
 </style>
 </head>
 <body>
-	<h1 style="background-color: powderblue;">My First Heading</h1>
+	<h1>My First Heading</h1>
 	<hr>
 	<h2 id=1123 style="font-size: 50px;">This is the second heading</h2>
 	<hr>
@@ -140,16 +157,17 @@ a:hover {
 	</map>
 	<br>
 	<!-- images that contain links -->
-	<div style="margin-bottom:110px;">
+	<div style="margin-bottom: 100px;">
 		<a href="http://localhost:8080/PK/UI/PK.html"> <img
 			alt="link with image" src="link_image.jpeg"
-			style="width: 100%; height: 50px; float: right;">
+			style="width: 50%; float: inherit;">
 		</a>
 	</div>
 
 	<br />
 
-	<pre style="background-image: url('mask.jpg'); width: 100%; color: white;">
+	<pre
+		style="background-image: url('mask.jpg'); width: 100%; color: white;">
 		prasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
 		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
 		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
@@ -193,11 +211,15 @@ a:hover {
 		</tbody>
 	</table>
 
-	<ul style="list-style-type: square;">
+	<ul>
 		<li>PK</li>
-		<li>PK</li>
-		<li>PK</li>
-		<li>PK</li>
+		<br>
+		<li><a href="#PK">PK</a></li>
+		<br>
+		<li><a href="#PK">PK</a></li>
+		<br>
+		<li><a href="#PK">PK</a></li>
+		<br>
 	</ul>
 	<dl>
 		<dt>PK</dt>
