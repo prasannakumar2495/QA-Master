@@ -5,8 +5,7 @@
 <meta charset="UTF-8">
 <title>Prasanna Kumar</title>
 <style>
-.DIV
-	{
+.DIV {
 	background-color: black;
 	color: white;
 }
@@ -63,7 +62,8 @@ ul {
 li a:hover {
 	background-color: yellow;
 }
-#pk100{
+
+#pk100 {
 	background-color: aqua;
 }
 </style>
@@ -78,7 +78,8 @@ li a:hover {
 	<hr>
 	<h4 style="background-color: rgba(200, 30, 15, 0.5);">this is
 		using the rgb value</h4>
-	<a href="#pk101">this is the link to navigate to the element with the ID value pk101</a>
+	<a href="#pk101">this is the link to navigate to the element with
+		the ID value pk101</a>
 	<p style="color: blue;">
 		My first <br>paragraph.
 	</p>
@@ -282,5 +283,49 @@ li a:hover {
 	<div id="pk101">
 		<p>prasanna kumar with the ID pk101</p>
 	</div>
+
+	<iframe style="height: inherit; width: inherit; border: windowframe;"
+		name="iframe_local"></iframe>
+	<p>
+		<a href="http://localhost:8080/PK/UI/PK.html" target="iframe_local">this
+			is the link for the local website</a>
+	</p>
+	<p>
+		<a
+			href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe_target"
+			target="iframe_local">this link will redirect to the w3school</a>
+	</p>
+	<!-- this is the beginning of the JAVASCRIPT -->
+	<p id="pk103">this is an demo</p>
+	<script>
+		document.getElementById("pk103").innerHTML = "prasanna kumar JAVASCRIPT";
+	</script>
+	<button style="width: auto; height: auto;" onclick="pkfunction()">click
+		here for executing the script code</button>
+	<p id="pk104">prasanna kumar</p>
+	<script>
+		function pkfunction() {
+			document.getElementById("pk104").innerHTML = "prasanna kumar script to change the html text";
+		}
+	</script>
+	<img alt="bulb_switch" src="pic_bulboff.gif" id="pk105">
+	<script>
+		function bulb_switch_pk(value) {
+			if (value == 1) {
+				document.getElementById("pk105").src = "pic_bulbon.gif"
+			} else {
+				document.getElementById("pk105").src = "pic_bulboff.gif"
+			}
+		}
+	</script>
+	<p>
+		<button onclick="bulb_switch_pk(1)">light on</button>
+		<button onclick="bulb_switch_pk(0)">light off</button>
+	</p>
+	<p id="pk106">PK</p>
+	<script>
+		document.getElemetById("pk106").innerHTML = "for the noscript tag"
+	</script>
+	<noscript>javaScript is not available in your browser</noscript>
 </body>
 </html>
