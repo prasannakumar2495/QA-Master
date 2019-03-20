@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 <link rel="stylesheet" href="CSS_Sheet.css">
-<meta charset="UTF-8">
+<meta charset="UTF-8" name="viewport" content="width=device-width">
 <title>Prasanna Kumar</title>
 <style>
 .DIV {
@@ -66,6 +66,34 @@ li a:hover {
 #pk100 {
 	background-color: aqua;
 }
+
+p {
+	font-size: inherit;
+}
+
+.name {
+	background-color: yellow; padding : 40px;
+	float: left;
+	width: 20%;
+}
+
+.current_city {
+	background-color: aqua; padding : 50px;
+	float: left;
+	width: 40%;
+}
+
+.home_town {
+	background-color: lime; padding : 40px;
+	float: left;
+	width: 20%;
+}
+
+@media screen and (max-width:10px) {
+	.name, .current_city, .home_town {
+		width: 100%;
+	}
+}
 </style>
 </head>
 <body>
@@ -93,9 +121,13 @@ li a:hover {
 		is the link</a>
 	<br>
 	<!-- the 'alt' attribute is used to describe the picture when the picture has not loaded -->
-	<img src="images/mask.jpg" width="500" height="500" alt="picture of an hacker">
+	<img src="images/mask.jpg" style="max-width: 100%;"
+		alt="picture of an hacker">
+	<br>
 	<button>This is the button</button>
-	<button disabled style="float: right;">This has to be disabled</button>
+	<br>
+	<button disabled style="float: inherit;">This has to be
+		disabled</button>
 	<ol>
 		<li style="color: red;">Link 1</li>
 		<li style="color: blue;">Link 2</li>
@@ -162,8 +194,8 @@ li a:hover {
 		is an smiley gif
 	</p>
 	<br>
-	<img src="images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400"
-		height="379">
+	<img src="images/workplace.jpg" alt="Workplace" usemap="#workmap"
+		width="400" height="379">
 
 	<map name="workmap">
 		<area shape="rect" coords="34,44,270,350" alt="Computer"
@@ -175,9 +207,9 @@ li a:hover {
 	</map>
 	<br>
 	<!-- images that contain links -->
-	<div style="margin-bottom: 100px;">
+	<div style="margin-bottom: 100px; max-width: 100%;">
 		<a href="http://localhost:8080/PK/UI/PK.html"> <img
-			alt="link with image" src="link_image.jpeg"
+			alt="link with image" src="images/link_image.jpeg"
 			style="width: 50%; float: inherit;">
 		</a>
 	</div>
@@ -185,7 +217,7 @@ li a:hover {
 	<br />
 
 	<pre
-		style="background-image: url('mask.jpg'); width: 100%; color: white;">
+		style="background-image: url('images/mask.jpg'); width: 100%; color: white;">
 		prasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
 		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
 		kumarprasanna kumarprasanna kumarprasanna kumarprasanna kumarprasanna
@@ -312,9 +344,9 @@ li a:hover {
 	<script>
 		function bulb_switch_pk(value) {
 			if (value == 1) {
-				document.getElementById("pk105").src ="images/pic_bulbon.gif"
+				document.getElementById("pk105").src = "images/pic_bulbon.gif"
 			} else {
-				document.getElementById("pk105").src ="images/pic_bulboff.gif"
+				document.getElementById("pk105").src = "images/pic_bulboff.gif"
 			}
 		}
 	</script>
@@ -327,5 +359,15 @@ li a:hover {
 		document.getElemetById("pk106").innerHTML = "for the noscript tag"
 	</script>
 	<noscript>javaScript is not available in your browser</noscript>
+
+	<div class="name">
+		<p>prasanna kumar</p>
+	</div>
+	<div class="current_city">
+		<p>bangalore</p>
+	</div>
+	<div class="home_town">
+		<p>rajahmundry</p>
+	</div>
 </body>
 </html>
