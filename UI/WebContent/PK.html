@@ -5,6 +5,10 @@
 <meta charset="UTF-8" name="viewport" content="width=device-width">
 <title>Prasanna Kumar</title>
 <style>
+* {
+	box-sizing: border-box;
+}
+
 .DIV {
 	background-color: black;
 	color: white;
@@ -72,25 +76,63 @@ p {
 }
 
 .name {
-	background-color: yellow; padding : 40px;
+	background-color: yellow;
+	padding: 40px;
 	float: left;
 	width: 20%;
 }
 
 .current_city {
-	background-color: aqua; padding : 50px;
+	background-color: aqua;
+	padding: 40px;
 	float: left;
 	width: 40%;
 }
 
 .home_town {
-	background-color: lime; padding : 40px;
+	background-color: lime;
+	padding: 40px;
 	float: left;
 	width: 20%;
 }
 
-@media screen and (max-width:10px) {
-	.name, .current_city, .home_town {
+.nameNEW {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	margin-top: 250px;
+}
+
+#pk107 {
+	float: right;
+	width: 5%;
+}
+.menu {
+	background-color: yellow;
+	float: left;
+	display: block;
+	margin-top: 10px;
+	width: 20%;
+	text-align: center;
+}
+
+.main {
+	margin-top: 10px;
+	float: left;
+	width: 60%;
+}
+
+.right {
+	margin-top: 10px;
+	background-color: lime;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+@media only screen and (max-width:600px) {
+	.menu, .main, .right {
 		width: 100%;
 	}
 }
@@ -366,8 +408,27 @@ p {
 	<div class="current_city">
 		<p>bangalore</p>
 	</div>
-	<div class="home_town">
+	<div class="home_town" style="border-bottom: 10px">
 		<p>rajahmundry</p>
+	</div>
+	<br>
+	<div class="nameNEW">
+		<h5>Prasanna Kumar</h5>
+		<p style="color: white;">prasannakumar2461995@gmail.com</p>
+	</div>
+	<div style="overflow: inherit;">
+		<div class="menu">
+			<p>bangalore</p>
+			<p>rajahmundry</p>
+			<p>dubai</p>
+		</div>
+	</div>
+	<div class="main">
+		<p>prasanna kumar</p>
+		<p>fhvboifbviueververufvebihbfihfuehnfviuvrngvui</p>
+	</div>
+	<div class="right">
+		<p>ieifgvirnvgur</p>
 	</div>
 </body>
 </html>
