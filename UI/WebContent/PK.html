@@ -30,6 +30,10 @@ td, tr {
 	text-shadow: green;
 }
 
+a {
+	color: red;
+}
+
 a: link {
 	color: green;
 	background-color: transparent;
@@ -108,31 +112,33 @@ p {
 	float: right;
 	width: 5%;
 }
+
 .menu {
 	background-color: yellow;
 	float: left;
-	display: block;
-	margin-top: 10px;
+	margin: 10px 0;
 	width: 20%;
 	text-align: center;
 }
 
 .main {
-	margin-top: 10px;
+	margin: 10px 0;
 	float: left;
 	width: 60%;
+	padding: 20px;
 }
 
 .right {
-	margin-top: 10px;
+	margin: 10px 0;
 	background-color: lime;
 	float: left;
 	width: 20%;
 	text-align: center;
+	padding: 20px;
 }
 
 @media only screen and (max-width:600px) {
-	.menu, .main, .right {
+	.menu, .main, .right, .name, .current_city, .home_town {
 		width: 100%;
 	}
 }
@@ -420,15 +426,31 @@ p {
 		<div class="menu">
 			<p>bangalore</p>
 			<p>rajahmundry</p>
-			<p>dubai</p>
+		</div>
+		<div class="main">
+			<p>prasanna kumar</p>
+			<p>fhvboifbviueververufvebihbfihfuehnfviuvrngvui</p>
+		</div>
+		<div class="right">
+			<p>ieifgvirnvgur</p>
 		</div>
 	</div>
-	<div class="main">
-		<p>prasanna kumar</p>
-		<p>fhvboifbviueververufvebihbfihfuehnfviuvrngvui</p>
+	<br>
+	<div style="margin-top: 10%">
+		<code> a=1; b=2; c=a+b; </code>
 	</div>
-	<div class="right">
-		<p>ieifgvirnvgur</p>
+	<p>
+		Einstein wrote:
+		<var>E</var>
+		=
+		<var>mc</var>
+		<sup>2</sup>.
+	</p>
+	<div style="background-color: gray; width: 100%; text-align: center;">
+		<p>
+			<strong>&copy copyright of this page belongs to <ins>PRASANNA
+					KUMAR</ins></strong>
+		</p>
 	</div>
 </body>
 </html>
