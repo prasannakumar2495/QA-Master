@@ -451,8 +451,9 @@ p {
 		<fieldset>
 			<legend>Name of the Person</legend>
 			First Name:<br> <input type="text" name="First Name"
-				maxlength="20" required="required"><br> Second Name:<br>
-			<input type="text" name="Second Name" maxlength="20"
+				maxlength="20" required="required" value="Prasanna"
+				readonly="readonly" disabled="disabled"><br> Second
+			Name:<br> <input type="text" name="Second Name" maxlength="20"
 				required="required"><br> <br> <input type="submit">
 		</fieldset>
 	</form>
@@ -502,7 +503,7 @@ p {
 			<br>
 		</fieldset>
 	</form>
-	<form>
+	<form autocomplete="off">
 		<fieldset>
 			<legend>Enter the user credentials</legend>
 			Enter the user name: <input type="text" required="required"
@@ -512,6 +513,12 @@ p {
 			<input type="submit" value="Click to Submit"> <input
 				type="reset">
 		</fieldset>
+	</form>
+	<br>
+	<form>
+		Select your Resume: <input type="file" value="select the file"
+			name="i/p file"
+			accept="application/pdf, application,application/vnd.ms-excel">
 	</form>
 	<br>
 	<div style="background-color: gray; width: 100%; text-align: center;">
