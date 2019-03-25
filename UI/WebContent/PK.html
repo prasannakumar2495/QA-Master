@@ -145,6 +145,9 @@ p {
 </style>
 </head>
 <body>
+	<nav>
+		<a href="#form">FORM</a> | <a href="#footer">FOOTER</a>
+	</nav>
 	<h1>My First Heading</h1>
 	<hr>
 	<h2 id=1123 style="font-size: 50px;">This is the second heading</h2>
@@ -256,10 +259,13 @@ p {
 	<br>
 	<!-- images that contain links -->
 	<div style="margin-bottom: 100px; max-width: 100%;">
+		<figure>
 		<a href="http://localhost:8080/PK/UI/PK.html"> <img
 			alt="link with image" src="images/link_image.jpeg"
 			style="width: 50%; float: inherit;">
 		</a>
+		<figcaption>FIG. that has links</figcaption>
+		</figure>
 	</div>
 
 	<br />
@@ -272,7 +278,7 @@ p {
 	</pre>
 	<br />
 
-	<table border="2" style="width: 100%;">
+	<table border="2" style="width: 100%;" id="table">
 		<caption>
 			<strong><i>This is a practice table</i></strong>
 		</caption>
@@ -447,7 +453,7 @@ p {
 		<sup>2</sup>.
 	</p>
 
-	<form>
+	<form id="form">
 		<fieldset>
 			<legend>Name of the Person</legend>
 			First Name:<br> <input type="text" name="First Name"
@@ -489,7 +495,9 @@ p {
 				type="color" name="Select the fav color" required="required"><br>
 			Enter your DOB:<input type="date" name="DOB" required="required"><br>
 			Date/Time of Application:<input type="datetime-local"
-				required="required"><br> <input type="submit">
+				required="required"><br> Enter the mobile number: <input
+				type="tel" pattern="[0-9]{10}" maxlength="10"
+				placeholder="Mobile Number"><br> <input type="submit">
 		</fieldset>
 		<br>
 	</form>
@@ -507,25 +515,30 @@ p {
 		<fieldset>
 			<legend>Enter the user credentials</legend>
 			Enter the user name: <input type="text" required="required"
-				name="user_name" style="float: inherit;"><br> <br>
-			Enter the user password: <input type="password" required="required"
-				name="Password" style="float: inherit;"><br> <br>
-			<input type="submit" value="Click to Submit"> <input
-				type="reset">
+				name="user_name" style="float: inherit;" placeholder="User Name"><br>
+			<br> Enter the user password: <input type="password"
+				required="required" name="Password" style="float: inherit;"
+				autocomplete="new-password" pattern="[A-Za-z0-9@#$%^&*]{10}"
+				title="The password should contain a lower,upper and a special character"
+				placeholder="Password"><br> <br> <input
+				type="submit" value="Click to Submit"> <input type="reset">
 		</fieldset>
 	</form>
 	<br>
 	<form>
 		Select your Resume: <input type="file" value="select the file"
 			name="i/p file"
-			accept="application/pdf, application,application/vnd.ms-excel">
+			accept="application/pdf, application,application/vnd.ms-excel"
+			multiple="multiple">
 	</form>
 	<br>
 	<div style="background-color: gray; width: 100%; text-align: center;">
-		<p>
-			<strong>&copy copyright of this page belongs to <ins>PRASANNA
-					KUMAR</ins></strong>
-		</p>
+		<footer id="footer">
+			<p>
+				<strong>&copy copyright of this page belongs to <ins>PRASANNA
+						KUMAR</ins></strong>
+			</p>
+		</footer>
 	</div>
 </body>
 </html>
