@@ -446,6 +446,74 @@ p {
 		<var>mc</var>
 		<sup>2</sup>.
 	</p>
+
+	<form>
+		<fieldset>
+			<legend>Name of the Person</legend>
+			First Name:<br> <input type="text" name="First Name"
+				maxlength="20" required="required"><br> Second Name:<br>
+			<input type="text" name="Second Name" maxlength="20"
+				required="required"><br> <br> <input type="submit">
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<legend>Gender of the Person</legend>
+			Select your gender:<br> <input type="radio" value="Male"
+				name="Gender">Male <br> <input type="radio"
+				value="Female" name="Gender">Female <br>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<legend>Personal Details</legend>
+			Select the name of the Home Town.<br> <select name="City"
+				required="required">
+				<option disabled="disabled" selected="selected" value=""
+					style="display: none;">---select any city---</option>
+				<optgroup label="KA">
+					<option>Bangalore</option>
+				</optgroup>
+				<optgroup label="AP">
+					<option>Rajahmundry</option>
+					<option>Vizag</option>
+					<option>Hydrabad</option>
+				</optgroup>
+				<optgroup label="TN">
+					<option>Chennai</option>
+				</optgroup>
+			</select><br> <br> Enter the details about your family:<br> <br>
+			<textarea rows="5" cols="10" required="required"></textarea>
+			<br> <br> <br> Select your FAV color: <input
+				type="color" name="Select the fav color" required="required"><br>
+			Enter your DOB:<input type="date" name="DOB" required="required"><br>
+			Date/Time of Application:<input type="datetime-local"
+				required="required"><br> <input type="submit">
+		</fieldset>
+		<br>
+	</form>
+
+	<form oninput="output.value=parseInt(a.value)*parseInt(b.value)">
+		<fieldset>
+			<legend>Enter your salary for an year</legend>
+			0 <input name="a" type="range" min="0" max="100">100*0<input
+				name="b" type="range" min="0" max="12">12 =
+			<output name="output" for="a b"></output>
+			<br>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<legend>Enter the user credentials</legend>
+			Enter the user name: <input type="text" required="required"
+				name="user_name" style="float: inherit;"><br> <br>
+			Enter the user password: <input type="password" required="required"
+				name="Password" style="float: inherit;"><br> <br>
+			<input type="submit" value="Click to Submit"> <input
+				type="reset">
+		</fieldset>
+	</form>
+	<br>
 	<div style="background-color: gray; width: 100%; text-align: center;">
 		<p>
 			<strong>&copy copyright of this page belongs to <ins>PRASANNA
