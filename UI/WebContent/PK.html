@@ -584,6 +584,36 @@ footer {
 	</section>
 	<br>
 	<br>
+	<section style="margin-top: 70px">
+		<script type="text/javascript">
+			var vdo = document.getElementById("video");
+			function playpause() {
+				if (vdo.paused) {
+					vdo.play();
+				} else {
+					vdo.pause();
+				}
+			}
+			function makeBig() {
+				vdo.width = 720;
+			}
+			function makeSmall() {
+				vdo.width = 420;
+			}
+		</script>
+		<video id="video" width="400" height="300" controls="controls">
+			<source src="videos/videoplayback.mp4" type="video/mp4">
+		</video>
+		<p>
+			Video courtesy <a
+				href="http://localhost:8080/PK/UI/videos/videoplayback.mp4">Telugu
+				video song</a>
+		</p>
+		<iframe style="width: 500px; height: 500px;"
+			src="https://www.youtube.com/watch?v=4ClC_ZkpaAI?autoplay=1"></iframe>
+	</section>
+	<br>
+	<br>
 	<footer>
 		<details>
 			<summary style="text-align: center;"> &copy created by
