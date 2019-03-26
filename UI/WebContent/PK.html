@@ -137,8 +137,42 @@ p {
 	padding: 20px;
 }
 
+section {
+	text-align: center;
+	width: 100%;
+	background-color: gray;
+	color: black;
+}
+
+article {
+	margin: 5px;
+	display: flex;
+	text-align: left;
+	float: left;
+	width: 20%;
+	padding: 5px;
+	background-color: highlight;
+	display: flex;
+}
+
+article#Yahoo {
+	text-align: center;
+	float: left;
+	width: 50%;
+	padding: 5px;
+}
+
+footer {
+	background-color: gray;
+	margin-top: 55px;
+	padding: 5px;
+	text-align: center;
+	padding: 5px;
+}
+
 @media only screen and (max-width:600px) {
-	.menu, .main, .right, .name, .current_city, .home_town {
+	.menu, .main, .right, .name, .current_city, .home_town, section, article,
+		article#Yahoo, footer {
 		width: 100%;
 	}
 }
@@ -260,11 +294,11 @@ p {
 	<!-- images that contain links -->
 	<div style="margin-bottom: 100px; max-width: 100%;">
 		<figure>
-		<a href="http://localhost:8080/PK/UI/PK.html"> <img
-			alt="link with image" src="images/link_image.jpeg"
-			style="width: 50%; float: inherit;">
-		</a>
-		<figcaption>FIG. that has links</figcaption>
+			<a href="http://localhost:8080/PK/UI/PK.html"> <img
+				alt="link with image" src="images/link_image.jpeg"
+				style="width: 50%; float: inherit;">
+			</a>
+			<figcaption>FIG. that has links</figcaption>
 		</figure>
 	</div>
 
@@ -532,13 +566,30 @@ p {
 			multiple="multiple">
 	</form>
 	<br>
-	<div style="background-color: gray; width: 100%; text-align: center;">
-		<footer id="footer">
-			<p>
-				<strong>&copy copyright of this page belongs to <ins>PRASANNA
-						KUMAR</ins></strong>
-			</p>
-		</footer>
-	</div>
+
+	<section>
+		<h1>SECTION using the HTML5 semantic elements</h1>
+		<article id="Google">
+			<header>Google</header>
+			<p>This was developed by Google Company</p>
+		</article>
+		<article id="Yahoo">
+			<header>Yahoo</header>
+			<p>This was developed by Yahoo Company</p>
+		</article>
+		<article id="Bing">
+			<header>Bing</header>
+			<p>This was developed by Microsoft Company</p>
+		</article>
+	</section>
+	<br>
+	<br>
+	<footer>
+		<details>
+			<summary style="text-align: center;"> &copy created by
+				PRASANNA KUMAR </summary>
+			<p>This page was created by HTML5 and CSS</p>
+		</details>
+	</footer>
 </body>
 </html>
