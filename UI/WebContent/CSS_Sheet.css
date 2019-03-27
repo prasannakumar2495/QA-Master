@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-	background-color: inherit;
+	background-color: rgba(255,99,71,0.2);
 }
 h1 {
 	color: red;
