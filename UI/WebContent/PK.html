@@ -590,22 +590,6 @@ footer {
 	<br>
 	<br>
 	<section style="margin-top: 70px">
-		<script type="text/javascript">
-			var vdo = document.getElementById("video");
-			function playpause() {
-				if (vdo.paused) {
-					vdo.play();
-				} else {
-					vdo.pause();
-				}
-			}
-			function makeBig() {
-				vdo.width = 720;
-			}
-			function makeSmall() {
-				vdo.width = 420;
-			}
-		</script>
 		<video id="video" width="400" height="300" controls="controls">
 			<source src="videos/videoplayback.mp4" type="video/mp4">
 		</video>
@@ -618,6 +602,7 @@ footer {
 			src="https://www.youtube.com/watch?v=4ClC_ZkpaAI?autoplay=1"></iframe>
 	</section>
 	<br>
+	<script src="javaScript_UI.js"></script>
 	<br>
 	<footer>
 		<details>
@@ -626,5 +611,6 @@ footer {
 			<p>This page was created by HTML5 and CSS</p>
 		</details>
 	</footer>
+
 </body>
 </html>
